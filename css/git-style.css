@@ -1,0 +1,58 @@
+/* ========== Begin Global Styles ==========*/
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+.floatR {
+	float: right;
+}
+
+.floatL {
+	float: left;
+}
+
+ul li {list-style-type: none;
+	text-decoration: none;}
+
+img {border: 0;}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+a:link, a:visited {
+	list-style-type: none;
+	text-decoration: none;
+	color: rgba(0,0,0,1);
+}
+
+a:hover {
+	color: rgba(255,255,255,1);
+	padding: 5px;
+	background: black;
+}
+
+a:active {
+	color: rgba(235,104,33,1);
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* ========== End Global Styles ==========*/
