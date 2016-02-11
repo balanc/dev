@@ -5,45 +5,68 @@
 	<title>Love Letter to Git</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/git-style.css">
+	<script src="js/jquery.color-2.1.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
 </head>
 <body class="container">
 
-	<nav>
-		<ul>
-			<li><a href="#">Dev Portal</a></li>
-			<li><a href="#">Letter to Bash</a></li>
-			<li><a href="#">Letter to GitHub</a></li>
-		</ul>
-	</nav>
+	<header class="sideBar clearfix floatL">
+		<h1>Git Love, Love Git</h1>
+		<figure>
+			<img src="img/git-heart.png" alt="heart icon">
+		</figure>
+			<nav class="navColumn">
+				<ul>
+					<li><a href="#">Dev Portal</a></li>
+					<li><a href="#">Letter to Bash</a></li>
+					<li><a href="#">Letter to GitHub</a></li>
+				</ul>
+			</nav>
+	</header>
+
 
 	<main>
 		<article>
+			<h2 class="hide">Love Letter to Git</h2>
 
-			<header>
-				<h1>Git Love, Love Git</h1>
-			</header>
+			<section id="buttonSection" class="nodeColumn floatL clearfix">
+				<h3 class="hide">Interactive Buttons</h3>
+<!-- 				<div class="nodeLine"></div> -->
+				<div id="nodeButton1" class="node"></div>
+				<div id="nodeButton2" class="node"></div>
+				<div id="nodeButton3" class="node"></div>
+				<div id="nodeButton4" class="node"></div>
+				<div id="nodeButton5" class="node"></div>
+				<div id="nodeButton6" class="node"></div>
+				<div id="nodeButton7" class="node"></div>
+			</section>
 
-			<p>I surrender to you. My money, my material possessions, my time, all of it is yours. Every part of my being is here for you. If there is ever another lifetime beyond this, I would still choose you.</p>
+			<section class="pColumn floatL">
+				<h3 class="hide">Dear Git</h3>
+					<p id="p1" class="hide">I surrender to you. My money, my material possessions, my time, all of it is yours. Every part of my being is here for you. If there is ever another lifetime beyond this, I would still choose you.</p>
 
-			<p>The way you lovingly care to watch over everything for me after I say “git init” fills me with an ever sunny disposition. When you start watching over my new directory, I know it’s in good hands because you’re always checking to make sure everything is just right for me. I ask about how things are with “git status” and you tell me what’s new. Thank you for always letting me know if I forgot to add a file to staging with “git add &lt;filename.extension&gt;”. You make it so easy on me when all I have to put is a dot to add everything new there. You’re too kind, really. I can’t tell you enough.</p>
+					<p id="p2" class="hide">The way you lovingly care to watch over everything for me after I say “git init” fills me with an ever sunny disposition. When you start watching over my new directory, I know it’s in good hands because you’re always checking to make sure everything is just right for me. I ask about how things are with “git status” and you tell me what’s new. Thank you for always letting me know if I forgot to add a file to staging with “git add &lt;filename.extension&gt;”. You make it so easy on me when all I have to put is a dot to add everything new there. You’re too kind, really. I can’t tell you enough.</p>
 
-			<p>In the past, I avoided commitments. I truly did not want to hurt anyone, but in the end, I was hurting not only others but myself too. I want to change all of that. Please. I trust you so much, almost to a fault, but is that wrong? I don’t even care, as long as you stay by my side. </p>
+					<p id="p3" class="hide">In the past, I avoided commitments. I truly did not want to hurt anyone, but in the end, I was hurting not only others but myself too. I want to change all of that. Please. I trust you so much, almost to a fault, but is that wrong? I don’t even care, as long as you stay by my side. </p>
 
-			<p>I’ve finally learned to commit and I will continue to love you as much as you love me. I looked at all of my early commits the other day with “git log” and I started thinking about it. It’s almost hilarious about how the timing is so coincidental that I finally commit to something in my life and I learn to commit all of the files on stage with “git commit”. I guess the first time I have ever officially committed was with that readme.md file and said “git commit -m “first commit””. The experience itself was unusually satisfying. Perhaps that is when I first started to open up to you. Thank you for being patient with me.</p>
+				
+					<p id="p4" class="hide">I’ve finally learned to commit and I will continue to love you as much as you love me. I looked at all of my early commits the other day with “git log” and I started thinking about it. It’s almost hilarious about how the timing is so coincidental that I finally commit to something in my life and I learn to commit all of the files on stage with “git commit”. I guess the first time I have ever officially committed was with that readme.md file and said “git commit -m “first commit””. The experience itself was unusually satisfying. Perhaps that is when I first started to open up to you. Thank you for being patient with me.</p>
+					
+					<p id="p5" class="hide">Do you remember when I first forgot to put that “-m” option after “git commit”? It was extremely unnerving. I missed having you around. I didn’t know what to do without you there. You sent me to vim to announce my commit message, but it was so different from what I expected an editor to be. I don’t want to have to rely on you to do everything, so I’m committed (haha) to learn everything I can for you.so we can work together better. At the very least, I know that there are two modes that do things in the vim editor. Keys are commands in normal mode there, that’s the default mode when you first go in. You can apparently just hit the Esc key to be in normal mode too. The “I” key is insert mode. That’s when I can type my commit message. After I’m done, I can just press Esc to return to normal mode and use “:w” to save my message and then use “:q” to quit vim or I can just do both at the same time with “:wq” and come back to you. As afraid as I was, I promise to learn how to take care of myself there. I mean, if I ever need or want to use an editor I’m familiar with, like nano, I’ll keep in mind what you said to me to change it, “git config --global core.editor “nano””. I won’t back down, though. Like I said, I’m committed to learning.</p>
+					
+					<p id="p6" class="hide">The first time I knew I couldn’t live without you was when I accidentally deleted the file I was working on. Everything was gone. The panic that set in stirred to resentment and I almost gave up completely. Oh how you embrace me with a second wind, a miracle, second only to the gift of finding you. All of that pain will forever cease as long as I continue to use “git checkout &lt;commit hash&gt; &lt;filename&gt;” to get everything back.</p>
+					
+					<p id="p7" class="hide">The way that you let me branch off in a different direction, but still keep all of my original work is simply breathtaking. I can play around all I want with “git branch &lt;branchname&gt;” without fear of ruining anything. Sometimes it works out for the best and think I should “git merge” to my original work. I get lost with all of the changes I make sometimes. It’s unbelievably helpful how “git diff” can compare all of the changes that I’ve made between commits and even branches. I cannot thank you enough. Really, you spoil me rotten.</p>
 
-			<p>Do you remember when I first forgot to put that “-m” option after “git commit”? It was extremely unnerving. I missed having you around. I didn’t know what to do without you there. You sent me to vim to announce my commit message, but it was so different from what I expected an editor to be. I don’t want to have to rely on you to do everything, so I’m committed (haha) to learn everything I can for you.so we can work together better. At the very least, I know that there are two modes that do things in the vim editor. Keys are commands in normal mode there, that’s the default mode when you first go in. You can apparently just hit the Esc key to be in normal mode too. The “I” key is insert mode. That’s when I can type my commit message. After I’m done, I can just press Esc to return to normal mode and use “:w” to save my message and then use “:q” to quit vim or I can just do both at the same time with “:wq” and come back to you. As afraid as I was, I promise to learn how to take care of myself there. I mean, if I ever need or want to use an editor I’m familiar with, like nano, I’ll keep in mind what you said to me to change it, “git config --global core.editor “nano””. I won’t back down, though. Like I said, I’m committed to learning.</p>
-
-			<p>The first time I knew I couldn’t live without you was when I accidentally deleted the file I was working on. Everything was gone. The panic that set in stirred to resentment and I almost gave up completely. Oh how you embrace me with a second wind, a miracle, second only to the gift of finding you. All of that pain will forever cease as long as I continue to use “git checkout &lt;commit hash&gt; &lt;filename&gt;” to get everything back.</p>
-
-			<p>The way that you let me branch off in a different direction, but still keep all of my original work is simply breathtaking. I can play around all I want with “git branch &lt;branchname&gt;” without fear of ruining anything. Sometimes it works out for the best and think I should “git merge” to my original work. I get lost with all of the changes I make sometimes. It’s unbelievably helpful how “git diff” can compare all of the changes that I’ve made between commits and even branches. I cannot thank you enough. Really, you spoil me rotten.</p>
+			</section>
 
 		</article>
 	</main>
 	
-	<footer>
+	<footer class="floatL">
 		<small><a href="mailto:balanc@colorado.edu">Site Design by Christian</a>
 		</small>
 	</footer>
-	<script src="js/javascript-main.js"></script>
+	<script src="js/git-js.js"></script>
 </body>
 </html>
