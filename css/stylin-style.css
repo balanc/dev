@@ -1,12 +1,23 @@
 /* universal styles */
 
-/* css reset*/
+/* css reset christ coyier*/
 *,
 *:before,
 *:after {
 	margin: 0;
 	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
+/* clearfix paul irish */
+.clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
 
 /* global styles */
 
@@ -28,10 +39,15 @@
 
 /* page styles */
 
-body {
+.home {
 	background: rgba(169, 89, 70, 0.9);
 	font-family: sans-serif;
-	font-size: 71.43%;
+	font-size: 62.5%;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 h2, p, li {
@@ -51,4 +67,8 @@ h1 {
 	border: 1px solid rgba(0,0,0,0.5);
 	padding: 5px 10px;
 	margin-bottom: 15px;
+}
+
+.twoColumn {
+	width: 49%;
 }
