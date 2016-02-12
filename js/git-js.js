@@ -1,37 +1,39 @@
 $(document).ready(function(){
 
-	//variables
+	/* ========== Begin Variables ==========*/
+
 	var nodeButton;
 	var id;
 	var nodeButtonId;
 	var check;
 	var commitString = Math.random().toString(36).substring(7);
 
+	/* ========== End Variables ==========*/
 
-	//functions
+	/* ========== Begin Functions ==========*/
 
 	//get number of divs on page
 	function nodeCount() {
-		nodeButton = $("#buttonSection div").length;
-		// console.log(nodeButton);
+		nodeButton = $("#buttonSection button").length;
 	}
 
-	//mosever effect on div buttons
+	/* ========== End Functions ==========*/
+
+	/* ========== Begin Page Interaction ==========*/
+
+	//mousever effect on buttons
 	$('.node').mouseover(function() {
-		$(this).data("background-color", $(this).css("background-color"));
 		$(this).finish().animate({
 			"background-color": 'rgba(255,0,106,1)',
 			"width": "55px",
 			"height": "55px"
-			// opacity: 0.2
 		}, 500);
 
 		$(this).animate({
 			"background-color": 'rgba(255,255,255,1)',
 			"width": "50px",
 			"height": "50px"
-			// opacity: 1
-		}, 500);
+		}, 250);
 	});
 
 	//mouseover effect on nav
@@ -46,12 +48,9 @@ $(document).ready(function(){
 	});
 
 
-	//get div button and corresponding paragraph, then show text
+	//get div button and corresponding paragraph number, then show text
 	$(".node").click(function(){
 		id = this.id;
-		// console.log(id);
-		// console.log(nodeButton);
-
 		// if(check == true)
 		// {
 		// 	$(this).css({
@@ -78,7 +77,7 @@ $(document).ready(function(){
 
 				$("#p" + i).finish().animate({width: 'toggle', height: 'toggle', padding: 'toggle'}, 500);
 				check = 1;
-				$(".commit").append(commitString)
+				// $(".commit").append(commitString)
 				// console.log(id);
 			}
 		}
@@ -86,5 +85,7 @@ $(document).ready(function(){
 	});
 
 	nodeCount();
+
+	/* ========== End Page Interaction ==========*/
 
 });
