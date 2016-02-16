@@ -129,6 +129,10 @@ a:active {
 	outline: none;
 } 
 
+.showLog {
+	background: black;
+}
+
 #nodeButton1 {
 	margin-top: 0;
 }
@@ -150,12 +154,13 @@ a:active {
 	margin-bottom: 50px;
 }
 
-/*.nodeLine {
+.nodeLine {
 	background: red;
-	border: 5px solid rgba(255,255,255,1);
-	height: 100%;
-	width: 0;
-}*/
+	border: 3px solid rgba(255,255,255,1);
+	width: 1200px;
+	transform: rotate(90deg);
+	margin-left: -552px;
+}
 
 .pColumn {
 	height: 100%;
@@ -169,6 +174,10 @@ a:active {
 	padding: 10px;
 	font-size: 1.4em;
 	line-height: 1.6em;
+}
+
+.pColumn h2 {
+	padding: 10px;
 }
 
 footer {

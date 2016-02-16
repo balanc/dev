@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var nodeButton;
 	var id;
 	var nodeButtonId;
-	var check;
+	var check = true;
 	var commitString = Math.random().toString(36).substring(7);
 
 	/* ========== End Variables ==========*/
@@ -50,24 +50,8 @@ $(document).ready(function(){
 
 	//get div button and corresponding paragraph number, then show text
 	$(".node").click(function(){
+
 		id = this.id;
-		// if(check == true)
-		// {
-		// 	$(this).css({
-		// 		'background': 'black'
-		// 	});
-
-		// 	check = false;
-		// 	console.log(check);
-
-		// } else {
-		// 	$(this).css({
-		// 		'background': 'rgba(255,255,255,1)'
-		// 	});
-
-		// 	check = true;
-		// 	console.log(check);
-		// }
 
 		for (var i=1; i<nodeButton+1; i++)
 		{
@@ -75,8 +59,26 @@ $(document).ready(function(){
 			if(id == nodeButtonId)
 			{
 
-				$("#p" + i).finish().animate({width: 'toggle', height: 'toggle', padding: 'toggle'}, 500);
-				check = 1;
+				$("#p" + i).finish().animate({
+					width: 'linear', 
+					height: 'toggle',
+					padding: 'toggle'
+				}, 500);
+
+				/* Unimplemened features */
+
+				// if (check == true)
+				// {
+				// 	$(this).addClass("showLog");
+				// 	check = false;
+
+				// } else {
+
+				// 	$(this).removeClass("showLog");
+				// 	check = true;
+				// }
+
+				// console.log(this);
 				// $(".commit").append(commitString)
 				// console.log(id);
 			}
