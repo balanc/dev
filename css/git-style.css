@@ -16,10 +16,7 @@
 	clear: both;
 }
 
-/* ========== End Universal Styles ==========*/
-/* ========== Begin Global Styles ==========*/
-
-/*input[type="submit"],
+input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
@@ -34,13 +31,16 @@ button {
     -webkit-user-select: none; 
        -moz-user-select: none;
         -ms-user-select: none;
-}*/
+}
 
-/*input::-moz-focus-inner,
+input::-moz-focus-inner,
 button::-moz-focus-inner {
     border: 0;
     padding: 0;
-}*/
+}
+
+/* ========== End Universal Styles ==========*/
+/* ========== Begin Global Styles ==========*/
 
 .floatR {
 	float: right;
@@ -120,7 +120,7 @@ a:active {
 	position: relative;
 	width: 50px;
 	height: 50px;
-	margin-top: 3em;
+	margin-top: 4em;
 	background: rgba(255,255,255,1);
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
@@ -156,10 +156,10 @@ a:active {
 
 .nodeLine {
 	background: red;
-	border: 3px solid rgba(255,255,255,1);
-	width: 1200px;
+	border: 5px solid rgba(255,255,255,1);
+	width: 1175px;
 	transform: rotate(90deg);
-	margin-left: -552px;
+	margin-left: -540px;
 }
 
 .pColumn {
