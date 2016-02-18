@@ -57,7 +57,7 @@ ul li {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	font-size: 62.5%;
 }
 
@@ -82,7 +82,13 @@ a:active {
 .container {
 	width: 960px;
 	margin: 0 auto;
-	background: rgba(238,82,50,1);
+	background: rgba(222,83,55,1);
+}
+
+.throw {
+	position: absolute;
+	top: -999em;
+	left: -999em;
 }
 
 .hide {
@@ -103,6 +109,7 @@ a:active {
 
 .sideBar h1 {
 	margin-top: 40px;
+	padding: .15em;
 	background: rgba(153,77,61,1);
 	color: rgba(255,0,106,1);
 	font-size: 2.4em;
@@ -116,7 +123,7 @@ a:active {
 	font-size: 1.4em;
 }
 
- .node {
+.node {
 	position: relative;
 	width: 50px;
 	height: 50px;
@@ -127,6 +134,8 @@ a:active {
 	border-radius: 50px;
 	border: none;
 	outline: none;
+	cursor: pointer;
+	cursor: hand;
 } 
 
 .showLog {
@@ -173,7 +182,13 @@ a:active {
 .pColumn p {
 	padding: 10px;
 	font-size: 1.4em;
-	line-height: 1.6em;
+	line-height: 1.8em;
+}
+
+mark {
+	background: rgba(238,53,129,0.6);
+	padding: 0em 0.5em 0em 0.5em;
+	color: rgba(230,230,230,1);
 }
 
 .pColumn h2 {
