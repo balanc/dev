@@ -1,0 +1,43 @@
+body {
+	background: $bg-color;
+	font-family: $font-stack;
+	color: $font-color;
+}
+
+p {
+	font-family: $font-copy;
+}
+
+h1, h2, h3 {
+	font-family: $font-heading;
+}
+
+a {
+	font-family: $font-links;
+}
+
+nav {
+	border: 1px solid $font-color;
+	text-align: center;
+	padding: 10px;
+		ul {
+			list-style: none;
+			li {
+				display: inline-block;
+				padding-right: 20px;
+				a {
+					text-decoration: none;
+					font-family: $font-links;
+				}
+
+				a:link, a:active {
+					color: black;
+				}
+
+				a:hover, a:active {
+					color: yellow;
+					background: black;
+				}
+			}
+		}
+}
