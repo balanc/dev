@@ -354,10 +354,21 @@ td,
 th {
   padding: 0; }
 
-body {
-  background: rgba(200, 200, 200, 0.9);
+.home {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url("http://placehold.it/960x600");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
   font-family: tahoma, helvetica, serif;
   color: rgba(1, 1, 1, 0.9); }
+
+.homeAlt {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url("http://placehold.it/960x600/ff0000");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover; }
 
 p {
   font-family: "Open Sans Condensed", sans-serif; }
@@ -385,5 +396,14 @@ nav {
       nav ul li a:hover, nav ul li a:active {
         color: yellow;
         background: black; }
+
+.portfolio li {
+  float: left;
+  padding-right: 50px;
+  min-height: 150px;
+  list-style: none; }
+  .portfolio li img {
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */

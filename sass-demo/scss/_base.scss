@@ -1,7 +1,13 @@
-body {
-	background: $bg-color;
+.home {
+	@include backImage('http://placehold.it/960x600');
+	// background: $bg-color;
 	font-family: $font-stack;
 	color: $font-color;
+}
+
+.homeAlt {
+	@include backImage('http://placehold.it/960x600/ff0000');
+
 }
 
 p {
@@ -28,16 +34,28 @@ nav {
 				a {
 					text-decoration: none;
 					font-family: $font-links;
-				}
+				}//end a
 
 				a:link, a:active {
 					color: black;
-				}
+				}//end link active
 
 				a:hover, a:active {
 					color: yellow;
 					background: black;
-				}
-			}
-		}
-}
+				}//end hover visited
+			} //end li
+		} //end ul
+} //end nav
+
+.portfolio {
+	li {
+		float: left;
+		padding-right: 50px;
+		min-height: 150px;
+		list-style: none;
+			img {
+				@include border-radius(50%);
+			}//end img
+	}//end li
+}//end portfolio
