@@ -1,0 +1,13 @@
+.box {
+	@include border-radius(50%);
+	background: yellow;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	@include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+	display: table;
+		h1 {
+			display: table-cell;
+			vertical-align: middle;
+		}
+}
