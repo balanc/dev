@@ -1,0 +1,75 @@
+/* line 3, ../scss/main.scss */
+.home {
+  border: 2px solid;
+  max-width: 960px;
+}
+
+/* line 8, ../scss/main.scss */
+.home div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background: red;
+}
+
+/* line 15, ../scss/main.scss */
+.slider {
+  -moz-animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-name: slide;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -moz-animation-delay: 0;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-moz-keyframes slide {
+  0% {
+    transform: translateX(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400px);
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400px);
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400px);
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
