@@ -1,0 +1,129 @@
+/* line 3, ../scss/main.scss */
+.home {
+  border: 2px solid;
+  max-width: 960px;
+}
+
+/* line 8, ../scss/main.scss */
+.box {
+  width: 0;
+  height: 0;
+  background: red;
+  border-radius: 100px;
+  border: 100px solid black;
+  border-right-color: blue;
+}
+
+/* line 28, ../scss/main.scss */
+.spearRight {
+  width: 25px;
+  height: 90px;
+  position: absolute;
+  background: red;
+  -moz-animation: diagonalRight 2s 1 ease-in forwards;
+  -webkit-animation: diagonalRight 2s 1 ease-in forwards;
+  animation: diagonalRight 2s 1 ease-in forwards;
+}
+
+/* line 36, ../scss/main.scss */
+.spearLeft {
+  width: 25px;
+  height: 90px;
+  position: absolute;
+  background: red;
+  -moz-animation: diagonalLeft 2s 1 ease-in forwards;
+  -webkit-animation: diagonalLeft 2s 1 ease-in forwards;
+  animation: diagonalLeft 2s 1 ease-in forwards;
+}
+
+/* line 44, ../scss/main.scss */
+.slide {
+  -moz-animation: slide 1s;
+  -webkit-animation: slide 1s;
+  animation: slide 1s;
+}
+
+@-moz-keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@-moz-keyframes diagonalLeft {
+  0% {
+    transform: skew(25deg) translateX(0) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(25deg) translateX(100px) translateY(100px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes diagonalLeft {
+  0% {
+    transform: skew(25deg) translateX(0) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(25deg) translateX(100px) translateY(100px);
+    opacity: 1;
+  }
+}
+@keyframes diagonalLeft {
+  0% {
+    transform: skew(25deg) translateX(0) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(25deg) translateX(100px) translateY(100px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes diagonalRight {
+  0% {
+    transform: skew(-25deg) translateX(400px) translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(-25deg) translateX(100px) translateY(200px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes diagonalRight {
+  0% {
+    transform: skew(-25deg) translateX(400px) translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(-25deg) translateX(100px) translateY(200px);
+    opacity: 1;
+  }
+}
+@keyframes diagonalRight {
+  0% {
+    transform: skew(-25deg) translateX(400px) translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(-25deg) translateX(100px) translateY(200px);
+    opacity: 1;
+  }
+}
