@@ -1,0 +1,36 @@
+.icon-sprite, .icon-modx, .icon-puzzle, .icon-ra, .icon-rocket {
+  background-image: url('../img/icon-s7accd01fc5.png');
+  background-repeat: no-repeat;
+}
+
+.icon-modx {
+  background-position: 0 0;
+}
+
+.icon-puzzle {
+  background-position: 0 -200px;
+}
+
+.icon-ra {
+  background-position: 0 -400px;
+}
+
+.icon-rocket {
+  background-position: 0 -600px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+li a {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+li a span {
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+}
