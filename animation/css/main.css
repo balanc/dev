@@ -1,17 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Orbitron:700);
-/* line 3, ../scss/_base.scss */
+/* ========== Global Styles ========== */
+/* line 4, ../scss/_base.scss */
 .home {
   background: #3c3c3c;
   max-width: 960px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
 }
-/* line 6, ../scss/_base.scss */
+/* line 11, ../scss/_base.scss */
 .home header {
   position: absolute;
   top: -9999em;
   left: -9999em;
 }
 
-/* line 33, ../scss/_base.scss */
+/* ========== End Styles ========== */
+/* ========== Animation Styles ========== */
+/* line 23, ../scss/_base.scss */
 .message {
   position: absolute;
   top: 500px;
@@ -31,7 +38,7 @@
   animation: systemOn 1s ease-in 7s 1 normal forwards;
 }
 
-/* line 52, ../scss/_base.scss */
+/* line 42, ../scss/_base.scss */
 .message span {
   opacity: 0;
   display: table-cell;
@@ -43,27 +50,27 @@
   animation: systemText 0.5s ease-in 8.5s 1 normal forwards;
 }
 
-/* line 63, ../scss/_base.scss */
+/* line 54, ../scss/_base.scss */
 .glow {
   box-shadow: inset 0 0 50px white, 0 0 80px #79b6bf;
 }
 
-/* line 69, ../scss/_base.scss */
+/* line 60, ../scss/_base.scss */
 .glowSpear {
   box-shadow: inset 0 0 30px white, 0 0 10px white;
 }
 
-/* line 76, ../scss/_base.scss */
+/* line 66, ../scss/_base.scss */
 .glowBar {
   box-shadow: inset 0 0 10px white, 0 10 20px white;
 }
 
-/* line 83, ../scss/_base.scss */
+/* line 72, ../scss/_base.scss */
 .glowRibbon {
   box-shadow: 0 0 20px white;
 }
 
-/* line 90, ../scss/_base.scss */
+/* line 81, ../scss/_base.scss */
 .ribbonTop {
   position: absolute;
   width: 200px;
@@ -81,7 +88,7 @@
   animation: slideDown 2s ease-out 5.5s 1 normal forwards;
 }
 
-/* line 106, ../scss/_base.scss */
+/* line 98, ../scss/_base.scss */
 .barLeft {
   position: absolute;
   width: 8px;
@@ -95,14 +102,14 @@
   border-right: 8px solid #79b6bf;
 }
 
-/* line 119, ../scss/_base.scss */
+/* line 111, ../scss/_base.scss */
 #bar1 {
   -moz-animation: expandTopLeft 1s ease-out 5.5s 1 normal forwards;
   -webkit-animation: expandTopLeft 1s ease-out 5.5s 1 normal forwards;
   animation: expandTopLeft 1s ease-out 5.5s 1 normal forwards;
 }
 
-/* line 122, ../scss/_base.scss */
+/* line 114, ../scss/_base.scss */
 #bar2 {
   top: 360px;
   -moz-animation: expandBottomLeft 1s ease-out 5.5s 1 normal forwards;
@@ -110,7 +117,7 @@
   animation: expandBottomLeft 1s ease-out 5.5s 1 normal forwards;
 }
 
-/* line 127, ../scss/_base.scss */
+/* line 119, ../scss/_base.scss */
 .barRight {
   position: absolute;
   width: 8px;
@@ -124,14 +131,14 @@
   border-right: 8px solid #79b6bf;
 }
 
-/* line 140, ../scss/_base.scss */
+/* line 132, ../scss/_base.scss */
 #bar3 {
   -moz-animation: expandTopRight 1s ease-out 5s 1 normal forwards;
   -webkit-animation: expandTopRight 1s ease-out 5s 1 normal forwards;
   animation: expandTopRight 1s ease-out 5s 1 normal forwards;
 }
 
-/* line 144, ../scss/_base.scss */
+/* line 136, ../scss/_base.scss */
 #bar4 {
   top: 360px;
   -moz-animation: expandBottomRight 1s ease-out 5s 1 normal forwards;
@@ -139,7 +146,7 @@
   animation: expandBottomRight 1s ease-out 5s 1 normal forwards;
 }
 
-/* line 164, ../scss/_base.scss */
+/* line 143, ../scss/_base.scss */
 .descend {
   width: 90px;
   height: 300px;
@@ -154,7 +161,7 @@
   animation: spinDown 3s ease-in-out 0s 1 normal forwards, gradientSlide 2s ease-in-out 3s infinite alternate both;
 }
 
-/* line 177, ../scss/_base.scss */
+/* line 157, ../scss/_base.scss */
 .blink {
   opacity: 0;
   -moz-animation: blink 0.1s ease-in-out 5s 3 alternate forwards;
@@ -162,7 +169,7 @@
   animation: blink 0.1s ease-in-out 5s 3 alternate forwards;
 }
 
-/* line 182, ../scss/_base.scss */
+/* line 162, ../scss/_base.scss */
 .activeTop {
   width: 0;
   height: 0;
@@ -175,7 +182,7 @@
   border-top: 50px solid #51797f;
 }
 
-/* line 194, ../scss/_base.scss */
+/* line 174, ../scss/_base.scss */
 .activeLeft {
   width: 0;
   height: 0;
@@ -188,7 +195,7 @@
   border-left: 50px solid #51797f;
 }
 
-/* line 206, ../scss/_base.scss */
+/* line 186, ../scss/_base.scss */
 .activeRight {
   width: 0;
   height: 0;
@@ -201,7 +208,7 @@
   border-right: 20px solid #51797f;
 }
 
-/* line 218, ../scss/_base.scss */
+/* line 198, ../scss/_base.scss */
 .activeBar {
   width: 50px;
   height: 10px;
@@ -213,7 +220,7 @@
   top: 320px;
 }
 
-/* line 229, ../scss/_base.scss */
+/* line 211, ../scss/_base.scss */
 #ringOut {
   width: 400px;
   height: 400px;
@@ -230,7 +237,7 @@
   animation: rotateCW 8s 1 cubic-bezier(0.05, 1.27, 0.9, 0.62) 0s forwards;
 }
 
-/* line 243, ../scss/_base.scss */
+/* line 225, ../scss/_base.scss */
 .block {
   width: 250px;
   height: 250px;
@@ -245,7 +252,7 @@
   animation: scale 5s 1 cubic-bezier(1, 0, 0.93, 1) 2s forwards;
 }
 
-/* line 258, ../scss/_base.scss */
+/* line 237, ../scss/_base.scss */
 .ring {
   height: 175px;
   width: 350px;
@@ -262,7 +269,7 @@
   animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards;
 }
 
-/* line 272, ../scss/_base.scss */
+/* line 251, ../scss/_base.scss */
 #ring2 {
   border-radius: 0 0 350px 350px;
   top: 325px;
@@ -270,7 +277,7 @@
   transform-origin: top center;
 }
 
-/* line 279, ../scss/_base.scss */
+/* line 260, ../scss/_base.scss */
 .spearLeft {
   height: 100px;
   width: 30px;
@@ -282,14 +289,14 @@
   background: #79b6bf;
 }
 
-/* line 290, ../scss/_base.scss */
+/* line 271, ../scss/_base.scss */
 #spear1 {
   -moz-animation: diagonalLeft 0.5s 1 ease-in 3.5s forwards;
   -webkit-animation: diagonalLeft 0.5s 1 ease-in 3.5s forwards;
   animation: diagonalLeft 0.5s 1 ease-in 3.5s forwards;
 }
 
-/* line 294, ../scss/_base.scss */
+/* line 275, ../scss/_base.scss */
 #spear2 {
   top: 140px;
   -moz-animation: diagonalLeft 0.5s 1 ease-in 3.75s forwards;
@@ -297,7 +304,7 @@
   animation: diagonalLeft 0.5s 1 ease-in 3.75s forwards;
 }
 
-/* line 299, ../scss/_base.scss */
+/* line 280, ../scss/_base.scss */
 #spear3 {
   top: 180px;
   -moz-animation: diagonalLeft 0.5s 1 ease-in 4.25s forwards;
@@ -305,7 +312,7 @@
   animation: diagonalLeft 0.5s 1 ease-in 4.25s forwards;
 }
 
-/* line 306, ../scss/_base.scss */
+/* line 285, ../scss/_base.scss */
 #spear4 {
   top: 297px;
   -moz-animation: diagonalLeft 0.5s 1 ease-in 4.75s forwards;
@@ -313,7 +320,7 @@
   animation: diagonalLeft 0.5s 1 ease-in 4.75s forwards;
 }
 
-/* line 313, ../scss/_base.scss */
+/* line 290, ../scss/_base.scss */
 .spearRight {
   height: 100px;
   width: 30px;
@@ -325,14 +332,14 @@
   background: #79b6bf;
 }
 
-/* line 324, ../scss/_base.scss */
+/* line 301, ../scss/_base.scss */
 #spear5 {
   -moz-animation: diagonalRight 0.5s 1 ease-in 4s forwards;
   -webkit-animation: diagonalRight 0.5s 1 ease-in 4s forwards;
   animation: diagonalRight 0.5s 1 ease-in 4s forwards;
 }
 
-/* line 328, ../scss/_base.scss */
+/* line 305, ../scss/_base.scss */
 #spear6 {
   top: 140px;
   -moz-animation: diagonalRight 0.5s 1 ease-in 4.25s forwards;
@@ -340,7 +347,7 @@
   animation: diagonalRight 0.5s 1 ease-in 4.25s forwards;
 }
 
-/* line 333, ../scss/_base.scss */
+/* line 310, ../scss/_base.scss */
 #spear7 {
   top: 180px;
   -moz-animation: diagonalRight 0.5s 1 ease-in 4.5s forwards;
@@ -348,7 +355,7 @@
   animation: diagonalRight 0.5s 1 ease-in 4.5s forwards;
 }
 
-/* line 338, ../scss/_base.scss */
+/* line 315, ../scss/_base.scss */
 #spear8 {
   top: 297px;
   -moz-animation: diagonalRight 0.5s 1 ease-in 5s forwards;
@@ -356,13 +363,15 @@
   animation: diagonalRight 0.5s 1 ease-in 5s forwards;
 }
 
-/* line 343, ../scss/_base.scss */
+/* line 320, ../scss/_base.scss */
 .slide {
   -moz-animation: slide 1s;
   -webkit-animation: slide 1s;
   animation: slide 1s;
 }
 
+/* ========== Animation Styles End ========== */
+/* ========== Keyframes Begin ========== */
 @-moz-keyframes spinDown {
   0% {
     transform: translateY(-30px);
@@ -1063,5 +1072,22 @@
     opacity: 1;
     font-size: 20px;
     transform: translateY(0px);
+  }
+}
+/* ========== Keyframes End ========== */
+/* ========== Tablet ========== */
+@media only screen and (max-width: 960px) {
+  /* line 582, ../scss/_base.scss */
+  main {
+    max-width: 720px;
+    transform: scale(0.75);
+  }
+}
+/* ========== Phone ========== */
+@media only screen and (max-width: 720px) {
+  /* line 591, ../scss/_base.scss */
+  main {
+    max-width: 480px;
+    transform: scale(0.5);
   }
 }
