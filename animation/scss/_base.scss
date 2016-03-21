@@ -60,38 +60,94 @@
 .glowSpear {
 	box-shadow:
 		inset 0 0 30px $glow-white,
-		0 0 10px white;
+		0 0 30px white;
 }
 
 .glowBar {
 	box-shadow:
 		inset 0 0 10px $glow-white,
-		0 10 20px white;
+		0 0 30px white;
 }
 
 .glowRibbon {
 	box-shadow:
-		// inset 0 0 10px $glow-white,
-		// 50 50 50px $glow-blue,
-		0 0 20px white;
+		0 0 50px $glow-white,
 }
 // glow effect end
 
 // hat begin
 .ribbonTop {
 	position: absolute;
-	width: 200px;
+    width: 200px;
     height: 200px;
-	left: 242px;
-    top: 0px;
+    left: 242px;
+    top: 5px;
     border: 25px solid $dark-blue;
     border-right: 0px solid transparent;
     border-bottom: 0px solid transparent;
     transform: rotate(45deg);
     opacity: 0;
-    z-index: -2;
+    z-index: -5;
     @include animation (slideDown 2s ease-out 5.5s 1 normal forwards);
 }
+
+.ribbonCover {
+	position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 242px;
+    top: 5px;
+    border: 25px solid $dark-blue;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    transform: rotate(45deg);
+    opacity: 0;
+    z-index: -1;
+    @include animation (slideDown 2s ease-out 5.5s 1 normal forwards);
+}
+
+.ribbonMid {
+	position: absolute;
+    width: 380px;
+    height: 10px;
+    left: 165px;
+    top: 45px;
+    opacity: 0;
+    z-index: -3;
+    background: $dark-blue;
+    @include animation (follow 2s ease-out 5.5s 1 normal forwards);
+}
+
+
+
+.ribbonTailLeft {
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    left: 115px;
+    top: 110px;
+    background: $dark-blue;
+    opacity: 0;
+    z-index: -3;
+    @include animation (follow 2s ease-out 5.5s 1 normal forwards);
+}
+
+.ribbonTailRight {
+	position: absolute;
+    width: 100px;
+    height: 25px;
+    left: 495px;
+    top: 110px;
+    background: $dark-blue;
+    opacity: 0;
+    z-index: -3;
+	box-shadow:
+		0 0 50px $glow-white;
+    @include animation (follow 2s ease-out 5.5s 1 normal forwards);
+}
+
+
+
 // hat end
 
 // external pattern begin
@@ -154,72 +210,136 @@
 // obelisk end
 
 // internal pattern begin
+
+.zigzag {
+    position: absolute;
+    width: 105px;
+    height: 0px;
+    top: 325px;
+    left: 294px;
+    z-index: 3;
+    transform: scale(1.8) rotate(90deg);
+    background: $dark-blue;
+}
+
+.zigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  width: 105%;
+  height: 25px;
+  background:
+    linear-gradient(
+      60deg, transparent 33.333%,
+      $dark-blue 33.333%, $dark-blue 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -60deg, transparent 33.333%,
+      $dark-blue 33.333%, $dark-blue 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 85px;
+}
+
+.zigzag:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    width: 105%;
+    height: 25px;
+    transform: rotate(180deg);
+  background:
+    linear-gradient(
+      60deg, transparent 33.333%,
+      $dark-blue 33.333%, $dark-blue 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -60deg, transparent 33.333%,
+      $dark-blue 33.333%, $dark-blue 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 85px;
+}
+
+/* unused internal pattern */
+
+// .wave{
+//     text-align: center;
+//     background: linear-gradient(to bottom, #0000ff, #ff0000);
+//     height: 0px;
+//     top: 330px;
+//     left: 225px;
+//     width: 220px;
+//     transform: rotate(90deg) scale(1.2);
+//     position: absolute;
+//     z-index: 3;
+// }
+
+// .wave::before{
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     background-repeat: repeat-x;
+//     height: 10px;
+//     background-size: 20px 200px;
+//     background-image: radial-gradient(circle at 10px -5px, rgba(0, 0, 0, 0) 12px, #ffffff 13px)
+// }
+
+// .wave::after{
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     background-repeat: repeat-x;
+//     height: 25px;
+//     background-size: 40px 20px;
+//     background-image: radial-gradient(circle at 10px 10px, #ffffff 9px, rgba(0, 0, 0, 0) 10px);
+// }
+
+
 .blink {
 	opacity: 0;
-	@include animation (blink .1s ease-in-out 5s 3 alternate forwards);
-}
-
-.activeTop {
-    width: 0;
-    height: 0;
-    position: absolute;
-    z-index: 1;
-    left: 330px;
-    top: 200px;
-	border-left: 25px solid transparent; 
-	border-right: 25px solid transparent; 
-	border-top: 50px solid $dark-blue;
-}
-
-.activeLeft {
-	width: 0;
-    height: 0;
-    position: absolute;
-    z-index: 1;
-	left: 330px;
-	top: 225px;
-	border-top: 95px solid transparent;
-	border-bottom: 0px solid transparent;
-	border-left: 50px solid #51797f;
-}
-
-.activeRight {
-	width: 0;
-    height: 0;
-    position: absolute;
-    z-index: 1;
-	left: 360px;
-  	top: 220px;
-  	border-top: 40px solid transparent;
-  	border-bottom: 40px solid transparent;
-  	border-right: 20px solid #51797f;
-}
-
-.activeBar {
-	width: 50px;
-    height: 10px;
-    margin-top: 10px;
-    position: relative;
-    background: $dark-blue;
-    z-index: 2;
-    left: 322px;
-    top: 320px; 
+	@include animation (blink .1s ease-in-out 3s 5 alternate forwards);
 }
 // internal pattern end
 
 // rotating ring begin
-#ringOut {
-	width: 400px;
-	height: 400px;
-	position: absolute;
-    left: 155px;
-    top: 115px;
-	z-index: -5;
-	border-top-color: $pale-blue;
-	border-top-style: solid;
-	border-top-width: 20px;
-	border-radius: 50%;
-	@include animation (rotateCW 8s 1 cubic-bezier(.05,1.27,.9,.62) 0s forwards);
+.ringTrim {
+	width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 160px;
+    top: 130px;
+    z-index: -6;
+    border: 20px solid $light-blue;
+    opacity: 0;
+    border-radius: 50%;   
+    @include animation (
+    	scaleOut 4s 1 cubic-bezier(1,0,0.93,1) 3s forwards,
+    	fade 1s 1 ease-out 7s forwards);
+}
+
+.ringPulse {
+	width: 390px;
+    height: 390px;
+    position: absolute;
+    left: 150px;
+    top: 120px;
+    z-index: -6;
+    border: 10px solid $pale-blue;
+    border-radius: 50%;
+    opacity: 0;
+    @include animation (
+    	scaleOut 4s 1 cubic-bezier(1,0,0.93,1) 3s forwards,
+    	pulseFade 1s 1 ease-out 7s forwards);
 }
 
 .block {
@@ -231,7 +351,7 @@
     background: rgba(60,60,60,1);
     border-radius: 50%;
     z-index: -5;
-    @include animation (scale 5s 1 cubic-bezier(1,0,.93,1) 2s forwards)
+    @include animation (scale 5s 1 cubic-bezier(1,0,.93,1) 2s forwards);
 }
 
 .ring {
@@ -245,7 +365,9 @@
 	opacity: 0;
 	background: $pale-blue;
 	transform-origin: bottom center;
-	@include animation (rotateCCW 4s 1 cubic-bezier(1,0,.93,1) 3s forwards);
+	@include animation (
+		rotateCCW 4s 1 cubic-bezier(1,0,.93,1) 3s forwards,
+		fade 1s 1 ease-out 7s forwards);
 }
 
 #ring2 {
@@ -420,10 +542,44 @@
 		transform: scale(0.4);
 	}
 	95% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@include keyframes (scaleOut) {
+	0% {
+		opacity: 1;
+		transform: scale(0.6);
+	}
+	@include blinkN(5%, 10%, 7);
+	95% {
 		transform: scale(1.2);
 	}
 	100% {
+		opacity: 1;
 		transform: scale(1.2);
+	}
+}
+
+@include keyframes (pulseFade) {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+}
+
+@include keyframes (fade) {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 
@@ -481,6 +637,17 @@
 	}
 	100% {
 		transform: translateY(110px) rotate(45deg);
+		opacity: 1;
+	}
+}
+
+@include keyframes (follow) {
+	0% {
+		transform: translateY(0px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(110px);
 		opacity: 1;
 	}
 }

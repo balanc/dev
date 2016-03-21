@@ -57,38 +57,102 @@
 
 /* line 60, ../scss/_base.scss */
 .glowSpear {
-  box-shadow: inset 0 0 30px white, 0 0 10px white;
+  box-shadow: inset 0 0 30px white, 0 0 30px white;
 }
 
 /* line 66, ../scss/_base.scss */
 .glowBar {
-  box-shadow: inset 0 0 10px white, 0 10 20px white;
+  box-shadow: inset 0 0 10px white, 0 0 30px white;
 }
 
 /* line 72, ../scss/_base.scss */
 .glowRibbon {
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 50px white;
 }
 
-/* line 81, ../scss/_base.scss */
+/* line 79, ../scss/_base.scss */
 .ribbonTop {
   position: absolute;
   width: 200px;
   height: 200px;
   left: 242px;
-  top: 0px;
+  top: 5px;
   border: 25px solid #51797f;
   border-right: 0px solid transparent;
   border-bottom: 0px solid transparent;
   transform: rotate(45deg);
   opacity: 0;
-  z-index: -2;
+  z-index: -5;
   -moz-animation: slideDown 2s ease-out 5.5s 1 normal forwards;
   -webkit-animation: slideDown 2s ease-out 5.5s 1 normal forwards;
   animation: slideDown 2s ease-out 5.5s 1 normal forwards;
 }
 
-/* line 98, ../scss/_base.scss */
+/* line 94, ../scss/_base.scss */
+.ribbonCover {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 242px;
+  top: 5px;
+  border: 25px solid #51797f;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(45deg);
+  opacity: 0;
+  z-index: -1;
+  -moz-animation: slideDown 2s ease-out 5.5s 1 normal forwards;
+  -webkit-animation: slideDown 2s ease-out 5.5s 1 normal forwards;
+  animation: slideDown 2s ease-out 5.5s 1 normal forwards;
+}
+
+/* line 109, ../scss/_base.scss */
+.ribbonMid {
+  position: absolute;
+  width: 380px;
+  height: 10px;
+  left: 165px;
+  top: 45px;
+  opacity: 0;
+  z-index: -3;
+  background: #51797f;
+  -moz-animation: follow 2s ease-out 5.5s 1 normal forwards;
+  -webkit-animation: follow 2s ease-out 5.5s 1 normal forwards;
+  animation: follow 2s ease-out 5.5s 1 normal forwards;
+}
+
+/* line 123, ../scss/_base.scss */
+.ribbonTailLeft {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  left: 115px;
+  top: 110px;
+  background: #51797f;
+  opacity: 0;
+  z-index: -3;
+  -moz-animation: follow 2s ease-out 5.5s 1 normal forwards;
+  -webkit-animation: follow 2s ease-out 5.5s 1 normal forwards;
+  animation: follow 2s ease-out 5.5s 1 normal forwards;
+}
+
+/* line 135, ../scss/_base.scss */
+.ribbonTailRight {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  left: 495px;
+  top: 110px;
+  background: #51797f;
+  opacity: 0;
+  z-index: -3;
+  box-shadow: 0 0 50px white;
+  -moz-animation: follow 2s ease-out 5.5s 1 normal forwards;
+  -webkit-animation: follow 2s ease-out 5.5s 1 normal forwards;
+  animation: follow 2s ease-out 5.5s 1 normal forwards;
+}
+
+/* line 154, ../scss/_base.scss */
 .barLeft {
   position: absolute;
   width: 8px;
@@ -102,14 +166,14 @@
   border-right: 8px solid #79b6bf;
 }
 
-/* line 111, ../scss/_base.scss */
+/* line 167, ../scss/_base.scss */
 #bar1 {
   -moz-animation: expandTopLeft 1s ease-out 5.5s 1 normal forwards;
   -webkit-animation: expandTopLeft 1s ease-out 5.5s 1 normal forwards;
   animation: expandTopLeft 1s ease-out 5.5s 1 normal forwards;
 }
 
-/* line 114, ../scss/_base.scss */
+/* line 170, ../scss/_base.scss */
 #bar2 {
   top: 360px;
   -moz-animation: expandBottomLeft 1s ease-out 5.5s 1 normal forwards;
@@ -117,7 +181,7 @@
   animation: expandBottomLeft 1s ease-out 5.5s 1 normal forwards;
 }
 
-/* line 119, ../scss/_base.scss */
+/* line 175, ../scss/_base.scss */
 .barRight {
   position: absolute;
   width: 8px;
@@ -131,14 +195,14 @@
   border-right: 8px solid #79b6bf;
 }
 
-/* line 132, ../scss/_base.scss */
+/* line 188, ../scss/_base.scss */
 #bar3 {
   -moz-animation: expandTopRight 1s ease-out 5s 1 normal forwards;
   -webkit-animation: expandTopRight 1s ease-out 5s 1 normal forwards;
   animation: expandTopRight 1s ease-out 5s 1 normal forwards;
 }
 
-/* line 136, ../scss/_base.scss */
+/* line 192, ../scss/_base.scss */
 #bar4 {
   top: 360px;
   -moz-animation: expandBottomRight 1s ease-out 5s 1 normal forwards;
@@ -146,7 +210,7 @@
   animation: expandBottomRight 1s ease-out 5s 1 normal forwards;
 }
 
-/* line 143, ../scss/_base.scss */
+/* line 199, ../scss/_base.scss */
 .descend {
   width: 90px;
   height: 300px;
@@ -161,83 +225,86 @@
   animation: spinDown 3s ease-in-out 0s 1 normal forwards, gradientSlide 2s ease-in-out 3s infinite alternate both;
 }
 
-/* line 157, ../scss/_base.scss */
-.blink {
-  opacity: 0;
-  -moz-animation: blink 0.1s ease-in-out 5s 3 alternate forwards;
-  -webkit-animation: blink 0.1s ease-in-out 5s 3 alternate forwards;
-  animation: blink 0.1s ease-in-out 5s 3 alternate forwards;
-}
-
-/* line 162, ../scss/_base.scss */
-.activeTop {
-  width: 0;
-  height: 0;
+/* line 214, ../scss/_base.scss */
+.zigzag {
   position: absolute;
-  z-index: 1;
-  left: 330px;
-  top: 200px;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 50px solid #51797f;
-}
-
-/* line 174, ../scss/_base.scss */
-.activeLeft {
-  width: 0;
-  height: 0;
-  position: absolute;
-  z-index: 1;
-  left: 330px;
-  top: 225px;
-  border-top: 95px solid transparent;
-  border-bottom: 0px solid transparent;
-  border-left: 50px solid #51797f;
-}
-
-/* line 186, ../scss/_base.scss */
-.activeRight {
-  width: 0;
-  height: 0;
-  position: absolute;
-  z-index: 1;
-  left: 360px;
-  top: 220px;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right: 20px solid #51797f;
-}
-
-/* line 198, ../scss/_base.scss */
-.activeBar {
-  width: 50px;
-  height: 10px;
-  margin-top: 10px;
-  position: relative;
+  width: 105px;
+  height: 0px;
+  top: 325px;
+  left: 294px;
+  z-index: 3;
+  transform: scale(1.8) rotate(90deg);
   background: #51797f;
-  z-index: 2;
-  left: 322px;
-  top: 320px;
-}
-
-/* line 211, ../scss/_base.scss */
-#ringOut {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: 155px;
-  top: 115px;
-  z-index: -5;
-  border-top-color: #79b6bf;
-  border-top-style: solid;
-  border-top-width: 20px;
-  border-radius: 50%;
-  -moz-animation: rotateCW 8s 1 cubic-bezier(0.05, 1.27, 0.9, 0.62) 0s forwards;
-  -webkit-animation: rotateCW 8s 1 cubic-bezier(0.05, 1.27, 0.9, 0.62) 0s forwards;
-  animation: rotateCW 8s 1 cubic-bezier(0.05, 1.27, 0.9, 0.62) 0s forwards;
 }
 
 /* line 225, ../scss/_base.scss */
+.zigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  width: 105%;
+  height: 25px;
+  background: linear-gradient(60deg, rgba(0, 0, 0, 0) 33.333%, #51797f 33.333%, #51797f 66.667%, rgba(0, 0, 0, 0) 66.667%), linear-gradient(-60deg, rgba(0, 0, 0, 0) 33.333%, #51797f 33.333%, #51797f 66.667%, rgba(0, 0, 0, 0) 66.667%);
+  background-size: 20px 85px;
+}
+
+/* line 246, ../scss/_base.scss */
+.zigzag:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -22px;
+  left: 0px;
+  width: 105%;
+  height: 25px;
+  transform: rotate(180deg);
+  background: linear-gradient(60deg, rgba(0, 0, 0, 0) 33.333%, #51797f 33.333%, #51797f 66.667%, rgba(0, 0, 0, 0) 66.667%), linear-gradient(-60deg, rgba(0, 0, 0, 0) 33.333%, #51797f 33.333%, #51797f 66.667%, rgba(0, 0, 0, 0) 66.667%);
+  background-size: 20px 85px;
+}
+
+/* unused internal pattern */
+/* line 308, ../scss/_base.scss */
+.blink {
+  opacity: 0;
+  -moz-animation: blink 0.1s ease-in-out 3s 5 alternate forwards;
+  -webkit-animation: blink 0.1s ease-in-out 3s 5 alternate forwards;
+  animation: blink 0.1s ease-in-out 3s 5 alternate forwards;
+}
+
+/* line 315, ../scss/_base.scss */
+.ringTrim {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  left: 160px;
+  top: 130px;
+  z-index: -6;
+  border: 20px solid #45bacb;
+  opacity: 0;
+  border-radius: 50%;
+  -moz-animation: scaleOut 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, fade 1s 1 ease-out 7s forwards;
+  -webkit-animation: scaleOut 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, fade 1s 1 ease-out 7s forwards;
+  animation: scaleOut 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, fade 1s 1 ease-out 7s forwards;
+}
+
+/* line 330, ../scss/_base.scss */
+.ringPulse {
+  width: 390px;
+  height: 390px;
+  position: absolute;
+  left: 150px;
+  top: 120px;
+  z-index: -6;
+  border: 10px solid #79b6bf;
+  border-radius: 50%;
+  opacity: 0;
+  -moz-animation: scaleOut 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, pulseFade 1s 1 ease-out 7s forwards;
+  -webkit-animation: scaleOut 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, pulseFade 1s 1 ease-out 7s forwards;
+  animation: scaleOut 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, pulseFade 1s 1 ease-out 7s forwards;
+}
+
+/* line 345, ../scss/_base.scss */
 .block {
   width: 250px;
   height: 250px;
@@ -252,7 +319,7 @@
   animation: scale 5s 1 cubic-bezier(1, 0, 0.93, 1) 2s forwards;
 }
 
-/* line 237, ../scss/_base.scss */
+/* line 357, ../scss/_base.scss */
 .ring {
   height: 175px;
   width: 350px;
@@ -264,12 +331,12 @@
   opacity: 0;
   background: #79b6bf;
   transform-origin: bottom center;
-  -moz-animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards;
-  -webkit-animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards;
-  animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards;
+  -moz-animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, fade 1s 1 ease-out 7s forwards;
+  -webkit-animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, fade 1s 1 ease-out 7s forwards;
+  animation: rotateCCW 4s 1 cubic-bezier(1, 0, 0.93, 1) 3s forwards, fade 1s 1 ease-out 7s forwards;
 }
 
-/* line 251, ../scss/_base.scss */
+/* line 373, ../scss/_base.scss */
 #ring2 {
   border-radius: 0 0 350px 350px;
   top: 325px;
@@ -277,7 +344,7 @@
   transform-origin: top center;
 }
 
-/* line 260, ../scss/_base.scss */
+/* line 382, ../scss/_base.scss */
 .spearLeft {
   height: 100px;
   width: 30px;
@@ -289,14 +356,14 @@
   background: #79b6bf;
 }
 
-/* line 271, ../scss/_base.scss */
+/* line 393, ../scss/_base.scss */
 #spear1 {
   -moz-animation: diagonalLeft 0.5s 1 ease-in 3.5s forwards;
   -webkit-animation: diagonalLeft 0.5s 1 ease-in 3.5s forwards;
   animation: diagonalLeft 0.5s 1 ease-in 3.5s forwards;
 }
 
-/* line 275, ../scss/_base.scss */
+/* line 397, ../scss/_base.scss */
 #spear2 {
   top: 140px;
   -moz-animation: diagonalLeft 0.5s 1 ease-in 3.75s forwards;
@@ -304,7 +371,7 @@
   animation: diagonalLeft 0.5s 1 ease-in 3.75s forwards;
 }
 
-/* line 280, ../scss/_base.scss */
+/* line 402, ../scss/_base.scss */
 #spear3 {
   top: 180px;
   -moz-animation: diagonalLeft 0.5s 1 ease-in 4.25s forwards;
@@ -312,7 +379,7 @@
   animation: diagonalLeft 0.5s 1 ease-in 4.25s forwards;
 }
 
-/* line 285, ../scss/_base.scss */
+/* line 407, ../scss/_base.scss */
 #spear4 {
   top: 297px;
   -moz-animation: diagonalLeft 0.5s 1 ease-in 4.75s forwards;
@@ -320,7 +387,7 @@
   animation: diagonalLeft 0.5s 1 ease-in 4.75s forwards;
 }
 
-/* line 290, ../scss/_base.scss */
+/* line 412, ../scss/_base.scss */
 .spearRight {
   height: 100px;
   width: 30px;
@@ -332,14 +399,14 @@
   background: #79b6bf;
 }
 
-/* line 301, ../scss/_base.scss */
+/* line 423, ../scss/_base.scss */
 #spear5 {
   -moz-animation: diagonalRight 0.5s 1 ease-in 4s forwards;
   -webkit-animation: diagonalRight 0.5s 1 ease-in 4s forwards;
   animation: diagonalRight 0.5s 1 ease-in 4s forwards;
 }
 
-/* line 305, ../scss/_base.scss */
+/* line 427, ../scss/_base.scss */
 #spear6 {
   top: 140px;
   -moz-animation: diagonalRight 0.5s 1 ease-in 4.25s forwards;
@@ -347,7 +414,7 @@
   animation: diagonalRight 0.5s 1 ease-in 4.25s forwards;
 }
 
-/* line 310, ../scss/_base.scss */
+/* line 432, ../scss/_base.scss */
 #spear7 {
   top: 180px;
   -moz-animation: diagonalRight 0.5s 1 ease-in 4.5s forwards;
@@ -355,7 +422,7 @@
   animation: diagonalRight 0.5s 1 ease-in 4.5s forwards;
 }
 
-/* line 315, ../scss/_base.scss */
+/* line 437, ../scss/_base.scss */
 #spear8 {
   top: 297px;
   -moz-animation: diagonalRight 0.5s 1 ease-in 5s forwards;
@@ -363,7 +430,7 @@
   animation: diagonalRight 0.5s 1 ease-in 5s forwards;
 }
 
-/* line 320, ../scss/_base.scss */
+/* line 442, ../scss/_base.scss */
 .slide {
   -moz-animation: slide 1s;
   -webkit-animation: slide 1s;
@@ -680,10 +747,10 @@
     transform: scale(0.4);
   }
   95% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 @-webkit-keyframes scale {
@@ -691,10 +758,10 @@
     transform: scale(0.4);
   }
   95% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 @keyframes scale {
@@ -702,10 +769,208 @@
     transform: scale(0.4);
   }
   95% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes scaleOut {
+  0% {
+    opacity: 1;
+    transform: scale(0.6);
+  }
+  5% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  45% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  95% {
     transform: scale(1.2);
   }
   100% {
+    opacity: 1;
     transform: scale(1.2);
+  }
+}
+@-webkit-keyframes scaleOut {
+  0% {
+    opacity: 1;
+    transform: scale(0.6);
+  }
+  5% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  45% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  95% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+@keyframes scaleOut {
+  0% {
+    opacity: 1;
+    transform: scale(0.6);
+  }
+  5% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  45% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  95% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+@-moz-keyframes pulseFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes pulseFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes pulseFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-moz-keyframes gradientSlide {
@@ -822,6 +1087,36 @@
   }
   100% {
     transform: translateY(110px) rotate(45deg);
+    opacity: 1;
+  }
+}
+@-moz-keyframes follow {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(110px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes follow {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(110px);
+    opacity: 1;
+  }
+}
+@keyframes follow {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(110px);
     opacity: 1;
   }
 }
@@ -1077,7 +1372,7 @@
 /* ========== Keyframes End ========== */
 /* ========== Tablet ========== */
 @media only screen and (max-width: 960px) {
-  /* line 582, ../scss/_base.scss */
+  /* line 749, ../scss/_base.scss */
   main {
     max-width: 720px;
     transform: scale(0.75);
@@ -1085,7 +1380,7 @@
 }
 /* ========== Phone ========== */
 @media only screen and (max-width: 720px) {
-  /* line 591, ../scss/_base.scss */
+  /* line 758, ../scss/_base.scss */
   main {
     max-width: 480px;
     transform: scale(0.5);
