@@ -212,24 +212,24 @@
     z-index: 3; /* slide under groups 1 and 3 */
   }
 
-  // #group2 .fore {
-  //   background: url('../img/scene/1-fore.png');
-  // }
+  #group2 .fore {
+    background: url('../img/scene/1-fore.png') 50% 50% / cover;
+  }
 
-  // #group2 .base {
-  //   background: url('../img/scene/1-base.png');
-  // }
+  #group2 .base {
+    background: url('../img/scene/1-base.png') 50% 50% / cover;
+  }
 
-  // #group2 .back1 {
-  //   background: url('../img/scene/1-back1.png');
-  // }
+  #group2 .back1 {
+    background: url('../img/scene/1-back1.png') 50% 50% / cover;
+  }
 
-  // #group2 .back2 {
-  //   background: url('../img/scene/1-back2.png');
-  // }
+  #group2 .back2 {
+    background: url('../img/scene/1-back2.png') 50% 50% / cover;
+  }
 
   #group2 .deep {
-    background: url('../img/scene/1-deep.png');
+    background: url('../img/scene/1-deep.png') 50% 50% / cover;
   }
 
 
@@ -237,25 +237,25 @@
     z-index: 4; /* slide over group 2 and 4 */
   }
 
-  // #group3 .fore {
-  //   background: url('../img/scene/2-fore.png');
-  // }
+  #group3 .fore {
+    background: url('../img/scene/2-fore.png') 50% 50% / cover;
+  }
 
-  // #group3 .base {
-  //   background: url('../img/scene/2-base.png');
-  // }
+  #group3 .base {
+    background: url('../img/scene/2-base.png') 50% 50% / cover;
+  }
 
   // #group3 .back1 {
-  //   background: url('../img/scene/2-back1.png');
+  //   background: url('../img/scene/2-back1.png') 50% 50% / cover;
   // }
-
+  
   // #group3 .back2 {
-  //   background: url('../img/scene/2-back2.png');
+  //   background: url('../img/scene/2-back2.png') 50% 50% / cover;
   // }
 
-  #group3 .deep {
-    background: url('../img/scene/2-deep.png');
-  }
+  // #group3 .deep {
+  //   background: url('../img/scene/2-deep.png') 50% 50% / cover;
+  // }
 
   #group4 {
     z-index: 2; /* slide under group 3 and 5 */

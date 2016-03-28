@@ -9,9 +9,9 @@
 
 <body class='home'>
 
-  <div class="debug">
+<!--   <div class="debug">
     <label><input type="checkbox"> Debug</label>
-  </div>
+  </div> -->
 
 	<main>
 
@@ -19,11 +19,10 @@
 			<header>
 				<h1>Title</h1>
 			</header>
-			<section class="slide" id="foreground">
+			<section class="slide" id="foreground"></section>
 			<header>
 				<h1>Title</h1>
 			</header>
-		</section>
 		</section>
 
 
@@ -31,22 +30,23 @@
 			<header class="slideLayer">
 				<h2>Slide One</h2>
 				<p>Hello Parallax Scrolling</p>
-<!-- 				<figure><img class="object" src="../img/scene/2-base.png" alt="placeholder"></figure> -->
+<!-- 				<figure><img class="object" src="img/scene/2-fore.png" alt="placeholder"></figure> -->
 			</header>
+			<div class="object" id="test"></div>
+			<!-- <div class="object" id="cloud"></div> -->
 		</section>
+
+<!-- 		<section class="slide block" id="blocker">
+			<h2>block</h2>
+		</section> -->
 
 		<section class="slide" id="slide2">
 			<header>
 				<h1>Slide Two</h1>
 			</header>
-<!-- 			<div class="inside class1"></div>
-			<div class="inside class2"></div> -->
+			<!-- <div class="inside class1"></div> -->
+			<!-- <div class="inside class2"></div> -->
 		</section>
-<!-- 		<section class="slide" id="slide2b">
-			<header>
-				<h1>Slide Two</h1>
-			</header>
-		</section> -->
 
 		<section class="slide" id="slide3">
 			<header>
@@ -68,7 +68,7 @@
 
 	</main>
 
-  <script>
+<!--   <script>
     var debugInput = document.querySelector("input");
     function updateDebugState() {
         document.body.classList.toggle('debug-on', debugInput.checked);
@@ -84,7 +84,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-10812217-1', 'auto');
 ga('send', 'pageview');
-</script>
+</script> -->
 
 </body>
 </html>

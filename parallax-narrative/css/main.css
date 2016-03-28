@@ -133,8 +133,24 @@ body {
   /* slide under groups 1 and 3 */
 }
 
+#group2 .fore {
+  background: url("../img/scene/1-fore.png") 50% 50%/cover;
+}
+
+#group2 .base {
+  background: url("../img/scene/1-base.png") 50% 50%/cover;
+}
+
+#group2 .back1 {
+  background: url("../img/scene/1-back1.png") 50% 50%/cover;
+}
+
+#group2 .back2 {
+  background: url("../img/scene/1-back2.png") 50% 50%/cover;
+}
+
 #group2 .deep {
-  background: url("../img/scene/1-deep.png");
+  background: url("../img/scene/1-deep.png") 50% 50%/cover;
 }
 
 #group3 {
@@ -142,8 +158,12 @@ body {
   /* slide over group 2 and 4 */
 }
 
-#group3 .deep {
-  background: url("../img/scene/2-deep.png");
+#group3 .fore {
+  background: url("../img/scene/2-fore.png") 50% 50%/cover;
+}
+
+#group3 .base {
+  background: url("../img/scene/2-base.png") 50% 50%/cover;
 }
 
 #group4 {
