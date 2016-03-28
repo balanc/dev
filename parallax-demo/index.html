@@ -9,19 +9,29 @@
 
 <body class='home'>
 
+  <div class="debug">
+    <label><input type="checkbox"> Debug</label>
+  </div>
+
 	<main>
 
 		<section class="slide" id="title">
 			<header>
 				<h1>Title</h1>
 			</header>
+			<section class="slide" id="foreground">
+			<header>
+				<h1>Title</h1>
+			</header>
+		</section>
 		</section>
 
+
 		<section class="slide" id="slide1">
-			<header>
+			<header class="slideLayer">
 				<h2>Slide One</h2>
 				<p>Hello Parallax Scrolling</p>
-				<figure><img src="http://placehold.it/300x200" alt="placeholder"></figure>
+<!-- 				<figure><img class="object" src="../img/scene/2-base.png" alt="placeholder"></figure> -->
 			</header>
 		</section>
 
@@ -29,7 +39,14 @@
 			<header>
 				<h1>Slide Two</h1>
 			</header>
+<!-- 			<div class="inside class1"></div>
+			<div class="inside class2"></div> -->
 		</section>
+<!-- 		<section class="slide" id="slide2b">
+			<header>
+				<h1>Slide Two</h1>
+			</header>
+		</section> -->
 
 		<section class="slide" id="slide3">
 			<header>
@@ -50,6 +67,24 @@
 		</section>
 
 	</main>
+
+  <script>
+    var debugInput = document.querySelector("input");
+    function updateDebugState() {
+        document.body.classList.toggle('debug-on', debugInput.checked);
+    }
+    debugInput.addEventListener("click", updateDebugState);
+    updateDebugState();
+  </script>
+
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-10812217-1', 'auto');
+ga('send', 'pageview');
+</script>
 
 </body>
 </html>
