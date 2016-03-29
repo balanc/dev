@@ -11,34 +11,6 @@ html {
   overflow: hidden;
 }
 
-/* Debugger styles - used to show the effect
---------------------------------------------- */
-.debug {
-  position: fixed;
-  top: 0;
-  left: .5em;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: .5em;
-  border-radius: 0 0 5px 5px;
-}
-
-.debug-on .slide {
-  -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-  transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-
-.debug-on .slideLayer {
-  box-shadow: 0 0 0 2px #000;
-  opacity: 0.9;
-}
-
-.group {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-}
-
 .home {
   perspective: 1px;
   transform-style: preserve-3d;
@@ -51,33 +23,17 @@ html {
   content: " ";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: 50% 50% / cover;
-}
-
-.slide:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: 50% 50% / cover;
 }
 
 .slide {
   position: relative;
+  padding: 25vh 10%;
   min-height: 100vh;
   width: 100vw;
-  transform-style: preserve-3d;
-  background: 50% 50% / cover;
-}
-
-.inside {
-  height: 768%;
-  width: 100%;
   transform-style: inherit;
   background: 50% 50% / cover;
 }
@@ -89,100 +45,39 @@ html {
 }
 
 .slide p {
-  transform: translateZ(0.2px) scale 0.8;
+  transform: translateZ(0.2px) scale(0.8);
   width: 25%;
   float: left;
 }
 
 .slide figure {
-  transform: translateZ(0px) scale(1);
-  z-index: 100;
+  transform: translateZ(-0.4px) scale(1.4);
   float: right;
 }
 
-.object:before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 50% 50% / cover;
-}
-
-.object {
-  min-height: 100vh;
-  width: 100vw;
-  background: 50% 50% / cover;
-}
-
-#test {
-  transform: translateZ(0.4px) scale(0.6);
-  background-image: url("../img/scene/2-fore.png");
-  z-index: 999;
-}
-
-#test:before {
-  transform: translateZ(0.05px) scale(1.2);
-  background-image: url("../img/scene/2-back2.png");
-}
-
 #title {
-  background-image: url("http://placehold.it/1024x768/");
+  background-image: url("http://placehold.it/1024x768/ffff00");
   background-attachment: fixed;
-}
-
-#slide1 {
-  background-image: url("../img/scene/2-deep.png");
 }
 
 #slide1:before {
-  background-image: url("../img/scene/2-back1.png");
-  transform: translateZ(0.1px) scale(0.9);
+  background-image: url("http://placehold.it/1024x768/00ff00");
+  transform: translateZ(-1px) scale(2);
   z-index: -1;
-}
-
-#slide1:after {
-  background-image: url("../img/scene/2-base.png");
-  transform: translateZ(0.3px) scale(0.7);
-  z-index: -1;
-}
-
-.block {
-  background: rgba(1, 1, 1, 0);
-  position: absolute;
-  z-index: 999;
 }
 
 #slide2 {
-  background-image: url("../img/scene/1-deep.png");
-  transform: translateZ(-5px) scale(10);
-  z-index: -1;
-}
-
-#slide2:before {
-  background-image: url("../img/scene/1-back2.png");
-  transform: translateZ(1px) scale(0.6);
-}
-
-#slide2:after {
-  background-image: url("../img/scene/1-base.png");
-  transform: translateZ(5px) scale(0.1);
-}
-
-#slide3:before {
-  background-image: url("../img/scene/8-deep.png");
-  transform: translateZ(0px) scale(1);
-  z-index: 1;
-}
-
-#slide4 {
-  background-image: url("http://placehold.it/1024x768/ff00ff");
+  background-image: url("http://placehold.it/1024x768");
   background-attachment: fixed;
 }
 
-#slide5:before {
-  background-image: url("http://placehold.it/1024x768/0f0f0f");
+#slide3:before {
+  background-image: url("http://placehold.it/1024x768/0000ff");
   transform: translateZ(-1px) scale(2);
   z-index: -1;
+}
+
+#slide4 {
+  background-image: url("http://placehold.it/1024x768/ff0000");
+  background-attachment: fixed;
 }

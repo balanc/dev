@@ -1,90 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
-	<title>CSS Parallax Demo</title>
-	<link rel="stylesheet" href="css/main.css">
+	<title>parallax css demo</title>
+	<link href="css/main.css" rel="stylesheet">
 </head>
+<body class="home">
+	<section id="title" class="slide">
+		<header>
+			<h1>TITLE</h1>
+		</header>
+	</section>
 
-<body class='home'>
+	<section id="slide1" class="slide">
+		<header>
+			<h2>SLIDE ONE</h2>
+			<p>Hello Parallax Scrolling</p>
+			<figure><img src="http://placehold.it/300x200" alt="placeholder"></figure>
+		</header>
+	</section>
 
-<!--   <div class="debug">
-    <label><input type="checkbox"> Debug</label>
-  </div> -->
+	<section id="slide2" class="slide">
+		<header>
+			<h1>SLIDE TWO</h1>
+		</header>
+	</section>
 
-	<main>
+	<section id="slide3" class="slide">
+		<header>
+			<h2>SLIDE THREE</h2>
+		</header>
+	</section>
 
-		<section class="slide" id="title">
-			<header>
-				<h1>Title</h1>
-			</header>
-			<section class="slide" id="foreground"></section>
-			<header>
-				<h1>Title</h1>
-			</header>
-		</section>
-
-
-		<section class="slide" id="slide1">
-			<header class="slideLayer">
-				<h2>Slide One</h2>
-				<p>Hello Parallax Scrolling</p>
-<!-- 				<figure><img class="object" src="img/scene/2-fore.png" alt="placeholder"></figure> -->
-			</header>
-			<div class="object" id="test"></div>
-			<!-- <div class="object" id="cloud"></div> -->
-		</section>
-
-<!-- 		<section class="slide block" id="blocker">
-			<h2>block</h2>
-		</section> -->
-
-		<section class="slide" id="slide2">
-			<header>
-				<h1>Slide Two</h1>
-			</header>
-			<!-- <div class="inside class1"></div> -->
-			<!-- <div class="inside class2"></div> -->
-		</section>
-
-		<section class="slide" id="slide3">
-			<header>
-				<h2>Slide Three</h2>
-			</header>
-		</section>
-
-		<section class="slide" id="slide4">
-			<header>
-				<h2>Slide Four</h2>
-			</header>
-		</section>
-
-		<section class="slide" id="slide5">
-			<header>
-				<h2>Slide Five</h2>
-			</header>
-		</section>
-
-	</main>
-
-<!--   <script>
-    var debugInput = document.querySelector("input");
-    function updateDebugState() {
-        document.body.classList.toggle('debug-on', debugInput.checked);
-    }
-    debugInput.addEventListener("click", updateDebugState);
-    updateDebugState();
-  </script>
-
-  <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-10812217-1', 'auto');
-ga('send', 'pageview');
-</script> -->
-
+	<section id="slide4" class="slide">
+		<header>
+			<h2>SLIDE FOUR</h2>
+		</header>
+	</section>
 </body>
 </html>

@@ -33,6 +33,8 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	margin-left: 50px;
+	background: rgba(60,60,60,1);
+	color: rgba(180,180,180,1);
 }
 
 a:link, a:visited {
@@ -42,8 +44,8 @@ a:link, a:visited {
 }
 
 a:hover {
-	color: rgba(30,105,165,1);
-	background: rgba(60,70,70,1);
+	color: rgba(80,185,245,1);
+	background: rgba(90,100,100,1);
 }
 
 a:active {
@@ -66,11 +68,21 @@ a:active {
 }
 
 body {
+	max-width: 960px;
+	margin: 0 auto;
+	nav {
+		text-align: center;
+	}
 	nav ul li {
-		margin-top: 10px;
-		font-family: $font-links;
+	  margin-top: 10px;
+	  font-family: "Convergence", sans-serif;
+	  display: inline-block;
+	  padding-right: 20px;
+	  font-size: 20px;
 	}
 }
+
+
 
 main {
 	ul li {
@@ -82,5 +94,27 @@ main {
 
 header, h2, h3 {
 	font-family: $font-heading;
+	color: rgba(230,230,230,1)
 }
 
+h1 {
+	text-align: center;
+}
+
+figure {
+  width: 300px;
+ text-align: center;
+ padding: 20px 0px 20px 0px
+}
+
+.projects ul:first-of-type {
+  width: 49%;
+  float: left;
+  margin-right: 19px;
+}
+
+.projects ul:last-of-type {
+  width: 49%;
+  float: left;
+  margin-left: 0px;
+}
