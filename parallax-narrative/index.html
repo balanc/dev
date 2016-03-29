@@ -3,183 +3,95 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>CSS Parallax-Narrative</title>
+	<title>CSS Parallax Demo</title>
 	<link rel="stylesheet" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body class='home'>
 
+	<main>
 
-  <div class="debug">
-    <label><input type="checkbox"> Debug</label>
-  </div>
+		<section class="slide" id="title">
+			<header>
+				<h1>A Day in the Life of a Lighthouse</h1>
+			</header>
+		</section>
 
-  <main class="parallax">
 
-    <section id="group1" class="group">
-      <div class="slideLayer base">
-        <header class="title"><h1>Base Layer</h1></header>
-      </div>
-    </section> <!-- group1 -->
+		<section class="slide" id="slide1">
+			<header class="slideLayer">
+				<h2>Slide One</h2>
+				<p>Sunrises are greeted by a calm mist that rolls through the sea. Seagulls and gentle waves fill the early morning soundscape, nothing more.</p>
+			</header>
+      <figure class="object" id="fore1"></figure>
+		</section>
 
-    <section id="group2" class="group">
-      <div class="slideLayer fore">
-        <header class="title"><h2>Foreground Layer</h2></header>
-      </div>
-      <div class="slideLayer base">
-        <header class="title"><h2>Base Layer</h2></header>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer back2">
-        <header class="title"><h2>Back2 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group2 -->
 
-    <section id="group3" class="group">
-      <div class="slideLayer fore">
-        <header class="title"><h2>Foreground Layer</h2><
-      </div>
-      <div class="slideLayer base">
-        <div class="title"><h2>Base Layer</h2></div>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer back2">
-        <header class="title"><h2>Back2 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group3 -->
+		<section class="slide" id="slide2">
+			<header>
+				<h2>Slide Two</h2>
+        <p>A weather buoy out at sea is the only other permanent company in this more remote part of the world.</p>
+			</header>
+      <figure class="object" id="fore2"></figure>
+		</section>
 
-    <section id="group4" class="group">
-        <div class="title"><h2>Base Layer</h2></div>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer back2">
-        <header class="title"><h2>Back2 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group4 -->
+		<section class="slide" id="slide3">
+			<header>
+				<h2>Slide Three</h2>
+        <p>As the day picks up, usually so do the wind and waves crashing about the rocks below.</p>
+			</header>
+      <figure class="object" id="fore3"></figure>
+		</section>
 
-    <section id="group5" class="group">
-        <div class="title"><h2>Base Layer</h2></div>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer back2">
-        <header class="title"><h2>Back2 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group5 -->
+		<section class="slide" id="slide4">
+			<header>
+				<h2>Slide Four</h2>
+        <p>Because of modern navigation, rarely are there any kind of ships seen venturing through this part of the sea. They are a welcome sight.</p>
+			</header>
+      <figure class="object" id="fore4"></figure>
+		</section>
 
-    <section id="group6" class="group">
-      <div class="slideLayer fore">
-        <div class="title"><h2>Foreground Layer</h2></div>
-      <div class="slideLayer base">
-        <div class="title"><h2>Base Layer</h2></div>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group6 -->
+		<section class="slide" id="slide5">
+			<header>
+				<h2>Slide Five</h2>
+        <p>The only few human visitors to ever set foot here are those who maintain the lighthouse and buoy. They tend to not stay more than they need to.</p>
+			</header>
+      <figure class="object" id="fore5"></figure>
+		</section>
 
-    <section id="group7" class="group">
-      <div class="slideLayer fore">
-        <header class="title"><h2>Foreground Layer</h2></header>
-      <div class="slideLayer base">
-        <header class="title"><h2>Base Layer</h2></header>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group7 -->
+    <section class="slide" id="slide6">
+      <header>
+        <h2>Slide Six</h2>
+        <p>It's uncommon to see a large storm moving through. Seagulls announce them before ever seeing it come over the horizon.</p>
+      </header>
+      <figure class="object" id="fore6"></figure>
+    </section>
 
-    <section id="group8" class="group">
-      <div class="slideLayer fore">
-        <header class="title"><h2>Foreground Layer</h2></header>
-      <div class="slideLayer base">
-        <header class="title"><h2>Base Layer</h2></header>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group8 -->
+    <section class="slide" id="slide7">
+      <header>
+        <h2>Slide Seven</h2>
+        <p>The sea turns violent and the wind cuts through the air, but usually briefly.</p>
+      </header>
+      <figure class="object" id="fore7"></figure>
+    </section>
 
-    <section id="group9" class="group">
-      <div class="slideLayer base">
-        <header class="title"><h2>Base Layer</h2></header>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer back2">
-        <header class="title"><h2>Back2 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group9 -->
+    <section class="slide" id="slide8">
+      <header>
+        <h2>Slide Eight</h2>
+        <p>Days seem to end quickly, but the colorful expressions of light at sunset are always welcome.</p>
+      </header>
+      <figure class="object" id="fore8"></figure>
+    </section>
 
-    <section id="group10" class="group">
-      <div class="slideLayer base">
-        <header class="title"><h2>Base Layer</h2></header>
-      </div>
-      <div class="slideLayer back1">
-        <header class="title"><h2>Back1 Layer</h2></header>
-      </div>
-      <div class="slideLayer back2">
-        <header class="title"><h2>Back2 Layer</h2></header>
-      </div>
-      <div class="slideLayer deep">
-        <header class="title"><h2>Deep Background Layer</h2></header>
-      </div>
-    </section> <!-- group10 -->
+    <section class="slide" id="slide9">
+      <header>
+        <h2>Slide Nine</h2>
+        <p>When night draws near, the lighthouse begins its sole task. Even if that task is mostly symbolic now, it will continue to alert ships of the dangerous coastline night after night.</p>
+      </header>
+      <figure class="object" id="fore9"></figure>
+    </section>
 
-  </main>
-
-  <script>
-    var debugInput = document.querySelector("input");
-    function updateDebugState() {
-        document.body.classList.toggle('debug-on', debugInput.checked);
-    }
-    debugInput.addEventListener("click", updateDebugState);
-    updateDebugState();
-  </script>
-
-  <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-10812217-1', 'auto');
-ga('send', 'pageview');
-</script>
-
-<script src="js/main.js"></script>
+	</main>
 
 </body>
 </html>
