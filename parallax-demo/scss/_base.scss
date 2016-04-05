@@ -1,89 +1,94 @@
 *,
 *:before,
 *:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	height: 100%;
-	overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 .home {
-	perspective: 1px;
-	transform-style: preserve-3d;
-	height: 100%;
-	overflow-y: scroll;
-	overflow-x: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  max-width: 1170px;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
 
 .slide:before {
-	content: " ";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: 50% 50% / cover;
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: 50% 50% / cover;
 }
 
 .slide {
-	position: relative;
-	padding: 25vh 10%;
-	min-height: 100vh;
-	width: 100vw;
-	transform-style: inherit;
-	background: 50% 50% / cover;
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  transform-style: inherit;
+  background: 50% 50% / cover;
 }
 
 .slide p,
 .slide figure {
-	position: relative;
-	z-index: -1;
+  position: absolute;
+  z-index: -1;
 }
 
 .slide p {
-	transform: translateZ(0.2px) scale (0.8);
-	width: 25%;
-	float: left;
+  transform: translateZ(0.2px) scale(0.8);
+  width: 25%;
+  float: left;
 }
 
-.slide figure {
-	transform: translateZ(0.4px) scale(1.4);
-	float: right;
+// .slide figure {
+//   transform: translateZ(-0.4px) scale(1.4);
+//   // float: right;
+// }
+
+.slide #fore1 {
+  transform: translateZ(-1px) scale(2);
+}
+.slide #form2 {
+  transform: translateZ(-0.5px) scale(1.5);
+}
+.slide #form3 {
+  transform: translateZ(0.5px) scale(0.5);
 }
 
 #title {
-	background-image: url('http://placehold.it/1024x768/ffff00');
-	background-attachment: fixed;
+  background-image: url("http://placehold.it/1024x768/ffff00");
+  background-attachment: fixed;
 }
 
 #slide1:before {
-	background-image: url('http://placehold.it/1024x768/00ff00');
-	transform: translateZ(-1px) scale(2);
-	z-index: -1;
+  background-image: url("../img/scene/1-deep.png");
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
 }
 
 #slide2 {
-	background-image: url('http://placehold.it/1024x768/0000ff');
-	background-attachment: fixed;
+  background-image: url("../img/scene/2-deep.png");
+  background-attachment: fixed;
 }
 
 #slide3:before {
-	background-image: url('http://placehold.it/1024x768/00ffff');
-	transform: translateZ(-1px) scale(2);
-	z-index: -1;
+  background-image: url("http://placehold.it/1024x768/0000ff");
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
 }
 
 #slide4 {
-	background-image: url('http://placehold.it/1024x768/ff00ff');
-	background-attachment: fixed;
-}
-
-#slide5:before {
-	background-image: url('http://placehold.it/1024x768/0f0f0f');
-	transform: translateZ(-1px) scale(2);
-	z-index: -1;
+  background-image: url("http://placehold.it/1024x768/ff0000");
+  background-attachment: fixed;
 }

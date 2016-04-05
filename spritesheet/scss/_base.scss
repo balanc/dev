@@ -1,0 +1,92 @@
+@import 'icon/*.png';
+@include all-icon-sprites;
+
+/* ========== Begin Global Styles ==========*/
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+.floatR {
+	float: right;
+}
+
+.floatL {
+	float: left;
+}
+
+ul li {list-style-type: none;
+	text-decoration: none;}
+
+img {border: 0;}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	header {
+		width: 100%;
+		margin-top: 20px;
+		text-align: center;
+		font-size: 18px;
+		color: white;
+	}
+}
+
+a:link, a:visited {
+	list-style-type: none;
+	text-decoration: none;
+	color: rgba(0,0,0,1);
+}
+
+a:hover {
+	color: rgba(255,255,255,1);
+	padding: 5px;
+}
+
+a:active {
+	color: rgba(235,104,33,1);
+}
+
+.home {
+	max-width: 960px;
+	margin: 0 auto;
+	background: rgba(60,60,60,1);
+}
+
+.throw {
+	position: absolute;
+	top: -999em;
+	left: -999em;
+}
+
+.hide {
+	display: none;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+	padding: 10px;
+	a {
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		span {
+			position: absolute;
+			top: -9999em;
+			left: -9999em;
+		}//span
+	}//a
+}//li

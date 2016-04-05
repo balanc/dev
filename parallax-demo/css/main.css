@@ -23,9 +23,9 @@ html {
   content: " ";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   background: 50% 50% / cover;
 }
 
@@ -40,19 +40,26 @@ html {
 
 .slide p,
 .slide figure {
-  position: relative;
+  position: absolute;
   z-index: -1;
 }
 
 .slide p {
-  transform: translateZ(0.2px) scale 0.8;
+  transform: translateZ(0.2px) scale(0.8);
   width: 25%;
   float: left;
 }
 
-.slide figure {
-  transform: translateZ(0.4px) scale(1.4);
-  float: right;
+.slide #fore1 {
+  transform: translateZ(-1px) scale(2);
+}
+
+.slide #form2 {
+  transform: translateZ(-0.5px) scale(1.5);
+}
+
+.slide #form3 {
+  transform: translateZ(0.5px) scale(0.5);
 }
 
 #title {
@@ -61,29 +68,23 @@ html {
 }
 
 #slide1:before {
-  background-image: url("http://placehold.it/1024x768/00ff00");
+  background-image: url("../img/scene/1-deep.png");
   transform: translateZ(-1px) scale(2);
   z-index: -1;
 }
 
 #slide2 {
-  background-image: url("http://placehold.it/1024x768/0000ff");
+  background-image: url("../img/scene/2-deep.png");
   background-attachment: fixed;
 }
 
 #slide3:before {
-  background-image: url("http://placehold.it/1024x768/00ffff");
+  background-image: url("http://placehold.it/1024x768/0000ff");
   transform: translateZ(-1px) scale(2);
   z-index: -1;
 }
 
 #slide4 {
-  background-image: url("http://placehold.it/1024x768/ff00ff");
+  background-image: url("http://placehold.it/1024x768/ff0000");
   background-attachment: fixed;
-}
-
-#slide5:before {
-  background-image: url("http://placehold.it/1024x768/0f0f0f");
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
 }

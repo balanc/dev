@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax Scrolling</title>
+</head>
+
+<style>
+
+.parallax {
+	-webkit-perspective: 300px;
+	perspective: 300px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+ 	scroll-behavior: smooth;
+    font-size: 200%;
+}	
+.parallaxLayer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.parallaxLayerBase {
+	transform: translateZ(0px);
+	z-index: 1;
+}
+.parallaxLayerBack {
+	transform: translateZ(-150px);
+	z-index: -10;
+}
+
+.parallaxGroup {
+	position: relative;
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+  body, html {
+    overflow: hidden;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+</style>
+
+<body>
+	<div class="parallax">
+
+		<div class="parallaxGroup">
+			<div class="parallaxLayer parallaxLayerBase"><div class="title">Base Layer1</div></div>
+			<div class="parallaxLayer parallaxLayerBack"><div class="title">Background Layer1</div></div>
+		</div>
+		<div class="parallaxGroup">
+			<div class="parallaxLayer parallaxLayerBase"><div class="title">Base2 Layer</div></div>
+			<div class="parallaxLayer parallaxLayerBack"><div class="title">Background Layer2</div></div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

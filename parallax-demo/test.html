@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax Codepen Demo</title>
+	<style>
+		*,
+		*:before,
+		*:after {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			height: 100%;
+			overflow: hidden;
+		}
+  /* Debugger styles - used to show the effect
+  --------------------------------------------- */
+
+  .debug {
+    position: fixed;
+    top: 0;
+    left: .5em;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .debug-on .slide {
+    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+ }
+  .debug-on .slideLayer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+  }
+  .group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+		.home {
+			  perspective: 1px;
+			  transform-style: preserve-3d;
+			  height: 100%;
+			  overflow-y: scroll;
+			  overflow-x: hidden;
+			  font-family: sans-serif;
+		}
+
+		h1,
+		h2 {
+			color: black;
+			background: rgba(255,255,255,0.5);
+			padding: 20px;
+			text-align: center;
+			box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+			border-radius: 10px;
+		}
+		
+
+		.slide {
+			  position: relative;
+			  padding: 25vh 10%;
+			  min-height: 100vh;
+			  width: 100vw;
+			  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+			  transform-style: inherit;
+			  background: 50% 50% / cover;
+		}
+
+		.slide:before {
+			  content: "";
+			  position: absolute;
+			  top: 0;
+			  bottom: 0;
+			  left:0;
+			  right:0;
+			  background: 50% 50% / cover;
+			}
+
+		.slide p,
+		.slide figure {
+			position: relative;
+			z-index: -1;
+			color: black;
+			background: rgba(255,255,255,0.5);
+			padding: 20px;
+			text-align: center;
+			box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+			border-radius: 10px;
+		}
+
+		.slide p {
+			transform: translateZ(0.2px) scale(0.8);
+			width: 25%;
+			float: left;
+		}		
+
+
+		.slide figure {
+			transform: translateZ(-0.4px) scale(1.4);
+			float: right;
+		}
+
+
+		#title {
+		  background-image: url("img/scene/6-deep.png"); /*gray*/
+		  background-attachment: fixed;
+		}
+
+		#slide1:before {
+		  background-image: url("img/scene/1-deep.png"); 
+		  transform: translateZ(-1px) scale(2);
+		  z-index:-1;
+		}
+
+		#slide2 {
+		  background-image: url("img/scene/2-deep.png"); 
+		  background-attachment: fixed;
+		}
+
+		#slide3:before {
+		  background-image: url("img/scene/3-deep.png");
+		  transform: translateZ(-1px) scale(2);
+		  z-index:-1;
+		}
+
+		#slide4 {
+		  background-image: url("img/scene/8-deep.png");
+		  color: white;
+		}
+
+	</style>
+</head>
+<body class="home">
+  <div class="debug">
+    <label><input type="checkbox"> Debug</label>
+  </div>
+	<section id="title" class="slide">
+		<header>
+			<h1>TITLE: CSS Parallax Scrolling</h1>
+		</header>
+	</section>
+
+	<section id="slide1" class="slide">
+		<header>
+			<h2>SLIDE 1: CSS Parallax is AWESOME</h2>
+			<p>hello world</p>
+			<figure><img src="img/scene/2-fore.png" alt="placeholder"></figure>
+		</header>
+	</section>
+
+	<section id="slide2" class="slide">
+		<header>
+			<h2>SLIDE 2: when it works</h2>
+		</header>
+	</section>
+
+	<section id="slide3" class="slide">
+		<header>
+			<h2>SLIDE 3: tricky though...</h2>
+		</header>
+	</section>
+	<section id="slide4" class="slide">
+		<header>
+			<h2>SLIDE 4: finale</h2>
+		</header>
+	</section>
+
+  <script>
+    var debugInput = document.querySelector("input");
+    function updateDebugState() {
+        document.body.classList.toggle('debug-on', debugInput.checked);
+    }
+    debugInput.addEventListener("click", updateDebugState);
+    updateDebugState();
+  </script>
+</body>
+</html>

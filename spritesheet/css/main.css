@@ -1,0 +1,177 @@
+.icon-sprite, .icon-armet, .icon-bomb, .icon-book, .icon-brick, .icon-butterfly, .icon-card, .icon-case, .icon-donut, .icon-flask, .icon-game, .icon-leaf, .icon-mail, .icon-medal, .icon-megaphone, .icon-north1, .icon-north2, .icon-sallet, .icon-staff, .icon-sub, .icon-tool {
+  background-image: url('../img/icon-sa6b1fe7aa2.png');
+  background-repeat: no-repeat;
+}
+
+.icon-armet {
+  background-position: 0 0;
+}
+
+.icon-bomb {
+  background-position: 0 -200px;
+}
+
+.icon-book {
+  background-position: 0 -400px;
+}
+
+.icon-brick {
+  background-position: 0 -600px;
+}
+
+.icon-butterfly {
+  background-position: 0 -800px;
+}
+
+.icon-card {
+  background-position: 0 -1000px;
+}
+
+.icon-case {
+  background-position: 0 -1200px;
+}
+
+.icon-donut {
+  background-position: 0 -1400px;
+}
+
+.icon-flask {
+  background-position: 0 -1600px;
+}
+
+.icon-game {
+  background-position: 0 -1800px;
+}
+
+.icon-leaf {
+  background-position: 0 -2000px;
+}
+
+.icon-mail {
+  background-position: 0 -2200px;
+}
+
+.icon-medal {
+  background-position: 0 -2400px;
+}
+
+.icon-megaphone {
+  background-position: 0 -2600px;
+}
+
+.icon-north1 {
+  background-position: 0 -2800px;
+}
+
+.icon-north2 {
+  background-position: 0 -3000px;
+}
+
+.icon-sallet {
+  background-position: 0 -3200px;
+}
+
+.icon-staff {
+  background-position: 0 -3400px;
+}
+
+.icon-sub {
+  background-position: 0 -3600px;
+}
+
+.icon-tool {
+  background-position: 0 -3800px;
+}
+
+/* ========== Begin Global Styles ==========*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.floatR {
+  float: right;
+}
+
+.floatL {
+  float: left;
+}
+
+ul li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+body header {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+a:link, a:visited {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  padding: 5px;
+}
+
+a:active {
+  color: #eb6821;
+}
+
+.home {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #3c3c3c;
+}
+
+.throw {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
+.hide {
+  display: none;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+li a {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+li a span {
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+}

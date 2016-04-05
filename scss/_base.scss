@@ -1,0 +1,120 @@
+/* ========== Begin Global Styles ==========*/
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+.floatR {
+	float: right;
+}
+
+.floatL {
+	float: left;
+}
+
+ul li {list-style-type: none;
+	text-decoration: none;}
+
+img {border: 0;}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin-left: 50px;
+	background: rgba(60,60,60,1);
+	color: rgba(180,180,180,1);
+}
+
+a:link, a:visited {
+	list-style-type: none;
+	text-decoration: none;
+	color: rgba(30,105,165,1);
+}
+
+a:hover {
+	color: rgba(80,185,245,1);
+	background: rgba(90,100,100,1);
+}
+
+a:active {
+	color: rgba(235,104,33,1);
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.throw {
+	position: absolute;
+	top: -999em;
+	left: -999em;
+}
+
+.hide {
+	display: none;
+}
+
+body {
+	max-width: 960px;
+	margin: 0 auto;
+	nav {
+		text-align: center;
+	}
+	nav ul li {
+	  margin-top: 10px;
+	  font-family: "Convergence", sans-serif;
+	  display: inline-block;
+	  padding-right: 20px;
+	  font-size: 20px;
+	}
+}
+
+
+
+main {
+	ul li {
+		margin-top: 50px;
+		font-family: $font-copy;
+		font-size: 20px;
+	}
+}
+
+header, h2, h3 {
+	font-family: $font-heading;
+	color: rgba(230,230,230,1)
+}
+
+h1 {
+	text-align: center;
+}
+
+figure {
+  width: 300px;
+ text-align: center;
+ padding: 20px 0px 20px 0px
+}
+
+.projects ul:first-of-type {
+  width: 49%;
+  float: left;
+  margin-right: 19px;
+}
+
+.projects ul:last-of-type {
+  width: 49%;
+  float: left;
+  margin-left: 0px;
+}
