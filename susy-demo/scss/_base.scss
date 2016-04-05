@@ -1,0 +1,29 @@
+body {
+	background: $transblack;
+	@include container(960px);
+}
+
+header,
+nav,
+main,
+aside,
+section {
+	@include box();
+}
+
+main {
+	@include span(8);
+}
+
+aside {
+	@include span(4 at 9);
+}
+
+div,
+section {
+	@extend .clearfixed;
+}
+
+.gallery img {
+	@include gallery(6);
+}
