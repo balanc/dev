@@ -11,6 +11,12 @@ section {
 	@include box();
 }
 
+div,
+section {
+	// @extend .clearfixed;
+	@include clearfixed;
+}
+
 main {
 	@include span(8);
 }
@@ -19,11 +25,32 @@ aside {
 	@include span(4 at 9);
 }
 
-div,
-section {
-	@extend .clearfixed;
+.gallery img {
+	@include gallery(4);
 }
 
-.gallery img {
+@include susy-breakpoint($medium) {
+	main {
+		@include span(6);
+	}//main
+
+	aside {
+		@include span(6);
+	}//aside
+	.gallery img {
 	@include gallery(6);
-}
+	}//img
+}//medium breakpoint
+
+@include susy-breakpoint($small) {
+	main {
+		@include span(12);
+	}//main
+
+	aside {
+		@include span(12);
+	}//aside
+	.gallery img {
+	@include gallery(11.999);
+	}//img
+}//medium breakpoint
