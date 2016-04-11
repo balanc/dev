@@ -118,3 +118,7 @@ figure {
   float: left;
   margin-left: 0px;
 }
+
+article {
+  display: none;
+}
