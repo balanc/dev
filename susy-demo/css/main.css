@@ -1,0 +1,135 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfixed:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.7);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+header,
+nav,
+main,
+aside,
+section {
+  background: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(0, 0, 0, 0.7);
+}
+
+div:after,
+section:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+main {
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+aside {
+  width: 33.33333%;
+  float: right;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+.gallery img {
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+.gallery img:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+}
+.gallery img:nth-child(3n + 2) {
+  margin-left: 33.33333%;
+  margin-right: -100%;
+  clear: none;
+}
+.gallery img:nth-child(3n + 3) {
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  clear: none;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  aside {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  .gallery img {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  .gallery img:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+  }
+  .gallery img:nth-child(2n + 2) {
+    margin-left: 50%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media (min-width: 1px) and (max-width: 480px) {
+  main {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  aside {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  .gallery img {
+    width: 99.99167%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  .gallery img:nth-child(1n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+  }
+}

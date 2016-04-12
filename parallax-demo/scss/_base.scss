@@ -15,6 +15,7 @@ html {
   perspective: 1px;
   transform-style: preserve-3d;
   height: 100%;
+  max-width: 1170px;
   overflow-y: scroll;
   overflow-x: auto;
 }
@@ -40,7 +41,7 @@ html {
 
 .slide p,
 .slide figure {
-  position: relative;
+  position: absolute;
   z-index: -1;
 }
 
@@ -50,9 +51,19 @@ html {
   float: left;
 }
 
-.slide figure {
-  transform: translateZ(-0.4px) scale(1.4);
-  float: right;
+// .slide figure {
+//   transform: translateZ(-0.4px) scale(1.4);
+//   // float: right;
+// }
+
+.slide #fore1 {
+  transform: translateZ(-1px) scale(2);
+}
+.slide #form2 {
+  transform: translateZ(-0.5px) scale(1.5);
+}
+.slide #form3 {
+  transform: translateZ(0.5px) scale(0.5);
 }
 
 #title {
@@ -61,13 +72,13 @@ html {
 }
 
 #slide1:before {
-  background-image: url("http://placehold.it/1024x768/00ff00");
+  background-image: url("../img/scene/1-deep.png");
   transform: translateZ(-1px) scale(2);
   z-index: -1;
 }
 
 #slide2 {
-  background-image: url("http://placehold.it/1024x768");
+  background-image: url("../img/scene/2-deep.png");
   background-attachment: fixed;
 }
 

@@ -1,0 +1,20 @@
+@mixin box() {
+	background: $transwhite;
+	border: solid 2px $transblack;
+}
+
+@mixin clearfixed() {
+	&:after {
+		display: table;
+		content: " ";
+		clear: both;
+	}
+}
+
+.clearfixed {
+	&:after {
+		display: table;
+		content: " ";
+		clear: both;
+	}
+}
