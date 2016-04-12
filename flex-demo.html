@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FLEX THIS</title>
+	<style>
+		.flex-container {
+			width: 90%;
+			padding: 10px;
+			border: solid 1px red;
+
+			-webkit-display: flex;
+			-ms-display: flex;
+			display: flex;
+
+/*			-webkit-flex-flow: row nowrap;
+			-ms-flex-flow: row nowrap;
+			flex-flow: row nowrap; /* row-reverse column column-reverse wrap no-wrap*/
+
+/*			-webkkit-justify-content: space-between;
+			-ms-flexpack: justify; start, end, center, justify
+			justify-content: space-between;
+			/*flex-start, flex-end, center, space-around, space-between*/
+
+/*			-webkit-align-items: center;
+			-ms-flex-align: center; start, end, center, baseline
+			align-items: center;
+			flex-start, flex-end, center, stretch, baseline*/
+			
+		}
+
+		.flex-container section {
+			background: rgba(0,0,0,0.2);
+			border: solid 1px black;
+			padding: 10px;
+			margin: 0 1%;
+			flex: 1;
+		}
+
+		.flex-container section:nth-of-type(2n) {
+			flex: 2;
+		}
+
+		@media only screen and (max-width: 480px) {
+			.flex-container {
+				-webkit-flex-flow: column;
+				-ms-flex-flow: column;
+				flex-flow: column;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>FLEX IT</h1>
+	</header>
+	<!-- main>section*3>h2+p*2>lorem -->
+	<main class="flex-container">
+		<section>
+			<h2>ONE</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi at labore nobis nemo iusto molestiae, perspiciatis, odio quos laboriosam perferendis non tempore sequi ab sapiente atque? Quia, ullam fugit ut!</p>
+			<p>Quam sapiente fugit reiciendis dolore enim deleniti illo! Laborum incidunt aperiam sed ipsam labore. Velit ipsam, hic porro perferendis perspiciatis officia aperiam eligendi suscipit nemo asperiores aliquid voluptatum repudiandae, quaerat.</p>
+		</section>
+		<section>
+			<h2>TWO</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae cupiditate quae eos ex maxime autem suscipit tempore eveniet, repellendus ipsum, expedita, provident optio a delectus voluptas atque recusandae sit et?</p>
+			<p>Illum voluptatum esse ea, perferendis ipsum sint consequatur maxime eum amet alias. Delectus accusantium repudiandae eius, sequi, atque aliquam exercitationem. Ipsum voluptatibus numquam voluptas maxime unde eaque, soluta nulla magni.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae cupiditate quae eos ex maxime autem suscipit tempore eveniet, repellendus ipsum, expedita, provident optio a delectus voluptas atque recusandae sit et?</p>
+			<p>Illum voluptatum esse ea, perferendis ipsum sint consequatur maxime eum amet alias. Delectus accusantium repudiandae eius, sequi, atque aliquam exercitationem. Ipsum voluptatibus numquam voluptas maxime unde eaque, soluta nulla magni.</p>
+		</section>
+		<section>
+			<h2>THREE</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, voluptatem eveniet sint reiciendis illum rerum quia. Nihil maxime fuga, sed quasi dicta repudiandae. Sequi et cum illum provident, repellat tempore.</p>
+			<p>Inventore cum nihil voluptate quaerat voluptatem dolor voluptatum. Corporis facilis velit distinctio eligendi ea at dolorum voluptates, quo fuga qui excepturi nesciunt iste et voluptas, obcaecati autem inventore dolore dicta.</p>
+		</section>
+	</main>
+</body>
+</html>
