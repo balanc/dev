@@ -42,9 +42,12 @@ img {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  margin-left: 50px;
   background: #3c3c3c;
   color: #b4b4b4;
+}
+body main section ul {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 a:link, a:visited {
@@ -77,6 +80,9 @@ a:active {
   display: none;
 }
 
+body {
+  overflow: hidden;
+}
 body nav {
   text-align: center;
 }
@@ -289,4 +295,78 @@ aside {
     margin-right: -100%;
     clear: both;
   }
+}
+.parallax {
+  height: 500px;
+  /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+.group:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: 50% 50% / cover;
+}
+
+.group {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  position: relative;
+  min-height: 50vh;
+  width: 100vw;
+  /*vertical width*/
+  transform-style: inherit;
+  background: 50% 50% / cover;
+}
+
+.parallaxLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fore1 {
+  -webkit-transform: translateZ(90px) scale(1.5);
+  transform: translateZ(90px) scale(0.7);
+  z-index: 9;
+}
+
+.base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) scale(1);
+  z-index: 5;
+}
+
+#group1 {
+  z-index: 8;
+  /* slide over group 2 */
+  background: blue;
+}
+
+#group2 {
+  z-index: 6;
+  /* slide under groups 1 and 3 */
+  min-height: 180vh;
+}
+
+#group3 {
+  z-index: 7;
+  /* slide over group 2 and 4 */
+  background: blue;
+}
+
+#group4 {
+  z-index: 5;
+  /* slide under group 3 and 5 */
+  min-height: 180vh;
 }

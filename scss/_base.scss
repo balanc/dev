@@ -32,9 +32,12 @@ img {border: 0;}
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	margin-left: 50px;
 	background: rgba(60,60,60,1);
 	color: rgba(180,180,180,1);
+	main section ul {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
 }
 
 a:link, a:visited {
@@ -71,7 +74,7 @@ body {
 	// max-width: 960px;
 	// margin: 0 auto;
 	// @include container(960px);
-	// overflow: hidden;
+	overflow: hidden;
 	nav {
 		text-align: center;
 	}//main navigation
@@ -228,54 +231,52 @@ aside {
 	}//img
 }//medium breakpoint
 
-// // .group {
-// //   -webkit-transition: -webkit-transform 0.5s;
-// //   transition: transform 0.5s;
-// // }
 
-// .parallax {
-//     height: 500px; /* fallback for older browsers */
-//     height: 100vh;
-//     // overflow-x: hidden;
-//     // overflow-y: scroll;
-//     -webkit-perspective: 300px;
-//     perspective: 300px;
-//   }
+.parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
 
-// .group:before { 
-//     content: " "; 
-//     position: absolute; 
-//     top: 0;
-//     bottom: 0; 
-//     left: 0; 
-//     right: 0; 
-//     background: 50% 50% / cover;
-//   }
+.group:before { 
+    content: " "; 
+    position: absolute; 
+    top: 0;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background: 50% 50% / cover;
+  }
 
-// .group {
-//     position: relative; 
-//     // padding: 25vh 10%;
-//     min-height: 100vh; 
-//     // width: 100vw; /*vertical width*/ 
-//     transform-style: inherit; 
-//     background: 50% 50% / cover;
-//   }
+.group {
+	-webkit-transition: -webkit-transform 0.5s;
+ 	transition: transform 0.5s;
+    position: relative; 
+    // padding: 25vh 10%;
+    min-height: 50vh; 
+    width: 100vw; /*vertical width*/ 
+    transform-style: inherit; 
+    background: 50% 50% / cover;
+  }
 
-// .parallaxLayer {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//   }
+.parallaxLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
 // /* ---------- Parallax Depth Styles -----------*/
 
-// .fore1 {
-//   -webkit-transform: translateZ(90px) scale(1.5);
-//   transform: translateZ(90px) scale(0.7);
-//   z-index: 9;
-// }
+.fore1 {
+  -webkit-transform: translateZ(90px) scale(1.5);
+  transform: translateZ(90px) scale(0.7);
+  z-index: 9;
+}
 
 // .fore2 {
 //   -webkit-transform: translateZ(60px) scale(1.5);
@@ -295,11 +296,11 @@ aside {
 //   z-index: 6;
 // }
 
-// .base {
-//   -webkit-transform: translateZ(0);
-//   transform: translateZ(0) scale(1);
-//   z-index: 5;
-// }
+.base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) scale(1);
+  z-index: 5;
+}
 
 // .back1 {
 //   -webkit-transform: translateZ(-50px) scale(1.2);
@@ -330,105 +331,35 @@ aside {
 
 // //group1
 
-// #group1 {
-//   z-index: 8; /* slide over group 2 */
-//   background: blue;
-// }
-
-// #group1 .base {
-//   background: rgba(38,71,94,1);
-// }
+#group1 {
+  z-index: 8; /* slide over group 2 */
+  background: blue;
+}
 
 // //group2
 
-// #group2 {
-//   z-index: 6; /* slide under groups 1 and 3 */
-//   min-height: 180vh;
-// }
+#group2 {
+  z-index: 6; /* slide under groups 1 and 3 */
+  min-height: 180vh;
+}
 
-// #group2 .base {
-//   background: url(../img/scene/1-base.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group2 .back1 {
-//   background: url(../img/scene/1-back1.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group2 .back2 {
-//   background: url(../img/scene/1-back2.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group2 .deep2 {
-//   background: url(../img/scene/1-deep.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
 
 // //group3
 
-// #group3 {
-//   z-index: 7; /* slide over group 2 and 4 */
-//   background: blue;
-// }
+#group3 {
+  z-index: 7; /* slide over group 2 and 4 */
+  background: blue;
+}
 
 // #group3 .base {
 //   // background: url(../img/scene/2-deep.png) 50% 50% no-repeat;
 //   // background-size: cover;
-//   // width: 100px;
-//   // height: 200px;
-//   // background: blue;
 // }
 
-// #group3 .fore1 {
-//   background: url(../img/scene/2-fore.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group3 .fore2 {
-//   background: url(../img/scene/2-base.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group3 .fore3 {
-//   background: url(../img/scene/2-back1.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group3 .fore4 {
-//   background: url(../img/scene/2-back2.png) 50% 50% no-repeat;
-//   background-size: cover;
-//   transform: scale(1);
-//   z-index: 10;
-// }
 
 // //group4
 
-// #group4 {
-//   z-index: 5; /* slide under group 3 and 5 */
-//   p {
-//     left: 45%;
-//     bottom: 20%;
-//   }
-// }
-
-// #group4 .base {
-//   background: url(../img/scene/3-base.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group4 .back1 {
-//   background: url(../img/scene/3-back2.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group4 .back2 {
-//   background: url(../img/scene/3-back1.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
-
-// #group4 .deep2 {
-//   background: url(../img/scene/3-deep.png) 50% 50% no-repeat;
-//   background-size: cover;
-// }
+#group4 {
+  	z-index: 5; /* slide under group 3 and 5 */
+	min-height: 180vh;
+}
