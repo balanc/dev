@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Archivo+Narrow|Convergence|Cagliostro);
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* ========== Begin Global Styles ==========*/
 *,
 *:before,
@@ -71,10 +77,6 @@ a:active {
   display: none;
 }
 
-body {
-  max-width: 960px;
-  margin: 0 auto;
-}
 body nav {
   text-align: center;
 }
@@ -86,6 +88,9 @@ body nav ul li {
   font-size: 20px;
 }
 
+main {
+  overflow: auto;
+}
 main ul li {
   margin-top: 50px;
   font-family: "Archivo Narrow", sans-serif;
@@ -107,18 +112,181 @@ figure {
   padding: 20px 0px 20px 0px;
 }
 
-.projects ul:first-of-type {
-  width: 49%;
-  float: left;
-  margin-right: 19px;
-}
-
-.projects ul:last-of-type {
-  width: 49%;
-  float: left;
-  margin-left: 0px;
-}
-
 article {
-  display: none;
+  opacity: 0;
+  margin-left: 50px;
+  left: 50px;
+  width: 100%;
+}
+
+figure:before {
+  content: " ";
+  position: absolute;
+  width: 300px;
+  height: 245px;
+  border: 10px solid;
+}
+
+figure:hover:before {
+  -moz-animation: expandFade 0.4s ease-out 0s 1 forwards;
+  -webkit-animation: expandFade 0.4s ease-out 0s 1 forwards;
+  animation: expandFade 0.4s ease-out 0s 1 forwards;
+}
+
+#name1 {
+  width: 50px;
+  height: 20px;
+  background: blue;
+  -moz-animation: cUp 1s ease-in 0s 1 forwards;
+  -webkit-animation: cUp 1s ease-in 0s 1 forwards;
+  animation: cUp 1s ease-in 0s 1 forwards;
+}
+
+#name2 {
+  content: "";
+  width: 50px;
+  height: 20px;
+  top: 85px;
+  background: red;
+  -moz-animation: cDown 1s ease-in 0s 1 forwards;
+  -webkit-animation: cDown 1s ease-in 0s 1 forwards;
+  animation: cDown 1s ease-in 0s 1 forwards;
+}
+
+@-moz-keyframes expandFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes expandFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes expandFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@-moz-keyframes cUp {
+  0% {
+    transform: skew(70deg) translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: skew(70deg) translateX(20px) translateY(20px);
+  }
+}
+@-webkit-keyframes cUp {
+  0% {
+    transform: skew(70deg) translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: skew(70deg) translateX(20px) translateY(20px);
+  }
+}
+@keyframes cUp {
+  0% {
+    transform: skew(70deg) translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: skew(70deg) translateX(20px) translateY(20px);
+  }
+}
+@-moz-keyframes cDown {
+  0% {
+    transform: skew(-70deg) translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: skew(-70deg) translateX(20px) translateY(-20px);
+  }
+}
+@-webkit-keyframes cDown {
+  0% {
+    transform: skew(-70deg) translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: skew(-70deg) translateX(20px) translateY(-20px);
+  }
+}
+@keyframes cDown {
+  0% {
+    transform: skew(-70deg) translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: skew(-70deg) translateX(20px) translateY(-20px);
+  }
+}
+.parallaxLayer li {
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+aside {
+  width: 33.33333%;
+  float: right;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .parallaxLayer li {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  .gallery img {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  .gallery img:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+  }
+  .gallery img:nth-child(2n + 2) {
+    margin-left: 50%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media (min-width: 1px) and (max-width: 480px) {
+  .parallaxLayer li {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  .gallery img {
+    width: 99.99167%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  .gallery img:nth-child(1n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+  }
 }
