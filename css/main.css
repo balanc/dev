@@ -45,9 +45,13 @@ body {
   background: #3c3c3c;
   color: #b4b4b4;
 }
-body main section ul {
-  margin-left: 50px;
-  margin-right: 50px;
+
+figure {
+  display: block;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 
 a:link, a:visited {
@@ -102,10 +106,15 @@ main ul li {
   font-family: "Archivo Narrow", sans-serif;
   font-size: 20px;
 }
+main a, main article {
+  text-align: center;
+  margin: 0 auto;
+}
 
 header, h2, h3 {
   font-family: "Convergence", sans-serif;
   color: #e6e6e6;
+  text-align: center;
 }
 
 h1 {
@@ -114,7 +123,8 @@ h1 {
 
 figure {
   width: 300px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px 0px 20px 0px;
 }
 
@@ -129,14 +139,21 @@ figure:before {
   content: " ";
   position: absolute;
   width: 300px;
-  height: 245px;
+  height: 300px;
   border: 10px solid;
+  opacity: 0;
 }
 
 figure:hover:before {
   -moz-animation: expandFade 0.4s ease-out 0s 1 forwards;
   -webkit-animation: expandFade 0.4s ease-out 0s 1 forwards;
   animation: expandFade 0.4s ease-out 0s 1 forwards;
+}
+
+#logo {
+  background: gray;
+  width: 100%;
+  height: 200px;
 }
 
 #name1 {
@@ -320,7 +337,7 @@ aside {
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
   width: 100vw;
   /*vertical width*/
   transform-style: inherit;
@@ -336,37 +353,47 @@ aside {
 }
 
 .fore1 {
-  -webkit-transform: translateZ(90px) scale(1.5);
-  transform: translateZ(90px) scale(0.7);
+  -webkit-transform: translateZ(-80px) scale(1.2);
+  transform: translateZ(-80px) scale(1.2);
   z-index: 9;
 }
 
-.base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0) scale(1);
-  z-index: 5;
+.deep2 {
+  -webkit-transform: translateZ(-500px) scale(4);
+  transform: translateZ(75px) scale(0.8);
+  z-index: 2;
+}
+
+#group1 header, #group3 header {
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  width: 100vw;
 }
 
 #group1 {
   z-index: 8;
   /* slide over group 2 */
-  background: blue;
+  background: url(../img/hexpattern2.svg) 50% 50% no-repeat;
+  background-size: cover;
 }
 
 #group2 {
   z-index: 6;
   /* slide under groups 1 and 3 */
-  min-height: 180vh;
+  min-height: 215vh;
 }
 
 #group3 {
   z-index: 7;
   /* slide over group 2 and 4 */
-  background: blue;
+  background: url(../img/hexpattern2.svg) 50% 50% no-repeat;
+  background-size: cover;
 }
 
 #group4 {
   z-index: 5;
   /* slide under group 3 and 5 */
-  min-height: 180vh;
+  min-height: 200vh;
 }
