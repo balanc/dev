@@ -5,10 +5,20 @@ body {
   width: 100vw;
 }
 
-section {
+#score {
   width: 300px;
   height: 300px;
   background: blue;
+}
+
+#timer {
+  width: 50%;
+  height: 2%;
+  background: red;
+  margin: 0 auto;
+  position: absolute;
+  top: 90%;
+  left: 25%;
 }
 
 .target {

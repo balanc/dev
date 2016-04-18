@@ -13,6 +13,7 @@ $( document ).ready(function() {
 
     var time = 5;
     var cursorTime = 2;
+    var timerBar = 5;
     var cssleft = [];
     var csstop = [];
 
@@ -26,7 +27,7 @@ $( document ).ready(function() {
 
 		positionTarget(newTarget);
 
-        console.log(positionX+" "+positionY);
+        // console.log(positionX+" "+positionY);
 
 
 		newTarget.css({	
@@ -40,6 +41,7 @@ $( document ).ready(function() {
 				$(this).remove(); 
 				console.log("working?"); 
 				time = 5;
+				timerBar = 5;
 		});
 		
 		targets.push(newTarget);
@@ -88,7 +90,7 @@ $( document ).ready(function() {
 	function cursorInvisible() {
 
 		cursorTime = cursorTime-1;
-		console.log("cursorTime: " + cursorTime);
+		// console.log("cursorTime: " + cursorTime);
 
 		if(cursorTime == 0) {
 			$('body').css("cursor", "none");
@@ -98,17 +100,38 @@ $( document ).ready(function() {
 
 	};
 
+	function countdownBar() {
+		if(timerBar == 5) {
+			$("#timer").stop().animate({
+				"width": "50%"
+			}, 100, "linear");
+			// $("#timer").css({"width": "50%"});
+			console.log("timerBar? " + timerBar)
+		} else {
+			$("#timer").stop().animate({
+				"width": "0"
+			}, 2000, "linear");
+			console.log("hi timerBar: " + timerBar);
+		}
+	};
+
+	function countdownTimer() {
+		timerBar = timerBar-1;
+	}
+
 	$('button').click(function() {
 		time = 5;
 		cursorTime = 2;
 		timer = setInterval(countdown, 1000);
 		target = setInterval(createTarget, 1000);
-		cursor = setInterval(cursorInvisible, 1000);
+		// cursor = setInterval(cursorInvisible, 1000);
 	});
 
 
 	var timer = setInterval(countdown, 1000);
 	var target = setInterval(createTarget, 1000);
-	var cursor = setInterval(cursorInvisible, 1000);
+	// var cursor = setInterval(cursorInvisible, 1000);
+	var countBar = setInterval(countdownBar, 100);
+	var counter = setInterval(countdownTimer, 1000);
 
 });
