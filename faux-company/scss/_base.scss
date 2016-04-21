@@ -32,16 +32,15 @@ body {
 a:link, a:visited {
 	list-style-type: none;
 	text-decoration: none;
-	color: rgba(0,0,0,1);
+	color: $warm-black;
 }
 
 a:hover {
-	color: rgba(255,255,255,1);
-	background: black;
+	color: $warm-black;
 }
 
 a:active {
-	color: rgba(235,104,33,1);
+	color: $pale-green;
 }
 
 .container {
@@ -53,6 +52,12 @@ a:active {
 	display: none;
 }
 
+.throw {
+	position: absolute;
+	left: -999em;
+	top: -999em;
+}
+
 /* ========== Begin Project Styles ==========*/
 
 nav {
@@ -62,6 +67,9 @@ nav {
 	width: 100vw;
 	position: fixed;
 	z-index: 999;
+	font-family: $font-heading;
+	font-size: $size-h3;
+
 	ul li {
 		display: inline-block;
 		margin-right: 3em;
@@ -70,6 +78,16 @@ nav {
 		}//first of nav ul li
 	}//nav ul li
 }//nav
+
+nav ul:hover > li {
+	opacity: 0.5;
+	color: $off-white;
+}
+
+nav ul:hover > li:hover {
+	opacity: 1.0;
+	color: $warm-black;
+}
 
 h1 {
 	@include throw();
@@ -126,7 +144,7 @@ main section {
 	header {
 		h2 {
 			@include span(3 at 9 of 12);
-			margin: 100px 0px 20px span(6 of 12);
+			margin: 0px 0px 20px span(6 of 12);
 		}//h2	
 	}//intro header
 

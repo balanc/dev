@@ -14,6 +14,7 @@ $(document).ready(function() {
 		var check = 1;
 		var imgBox = $("#imgBox")
 
+		//hover causes fade
 		$("#next, #prev").hover(function() {
 
 			if (check == 1) {
@@ -40,8 +41,9 @@ $(document).ready(function() {
 
 		$("#prev").click(function() {
 			imgPrev();
-		})
+		})//next and previous buttons
 
+		//cycle backwards through image and caption array on click
 		function imgPrev()
 		{
 
@@ -88,6 +90,7 @@ $(document).ready(function() {
 
 		};
 
+		//cycle forwards through image and caption array on click
 		function imgNext()
 		{
 
@@ -132,8 +135,9 @@ $(document).ready(function() {
 
 			}
 
-		}
+		}//imgNext
 
+		//cycle through image and captions array
 		function imgSwap()
 		{
 			if (i<=images.length-1){
@@ -172,10 +176,11 @@ $(document).ready(function() {
 
 				$("#caption").text(captions[0]);
 			}
-		};
+		};//imgSwap
 	
-		var interval = setInterval(imgSwap, 2000);
+		var interval = setInterval(imgSwap, 2000); //start slideshow
 	
+		//stop rotation on hover function
 		$("#imgBox").hover(function() {
 	
 			if(check == 1) {
@@ -189,5 +194,21 @@ $(document).ready(function() {
 				check = 1;
 			}
 		
-		});
+		});//imgBox
+
+
+/* Smooth Scrolling courtesy of https://paulund.co.uk/smooth-scroll-to-internal-links-with-jquery*/
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
 });
