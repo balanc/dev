@@ -1,1 +1,21 @@
-$bg-color: rgba(192,204,181,1);
+@import url(https://fonts.googleapis.com/css?family=Homenaje|Source+Sans+Pro:400,300);
+
+$font-stack: 'Helvetica', 'Source Sans Pro', sans-serif;
+$font-heading: 'Homenaje', sans-serif;
+$font-copy: 'Source Sans Pro:400', sans-serif;
+$font-links: 'Homenaje', sans-serif;
+
+$size-header: 30px;
+
+$size-copy: 14px;
+$height-copy: 24px;
+
+$size-h3: 20px;
+
+$size-icon: 30px;
+
+$pale-green: rgba(192,204,181,1);
+$dark-grey: rgba(70,70,70, 1);
+$off-white: rgba(235,225,225,1);
+$warm-grey: rgba(60, 50, 50, 1);
+$warm-black: rgba(30,10,10,1);

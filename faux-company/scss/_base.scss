@@ -24,9 +24,9 @@ ul li {list-style-type: none;
 img {border: 0;}
 
 body {
-	@include bg();
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-family: $font-copy;
+	font-size: $size-copy;
+	line-height: $height-copy;
 }
 
 a:link, a:visited {
@@ -37,7 +37,6 @@ a:link, a:visited {
 
 a:hover {
 	color: rgba(255,255,255,1);
-	padding: 5px;
 	background: black;
 }
 
@@ -60,22 +59,17 @@ nav {
 	background: rgba(196,197,199,1);
 	padding: 10px 0px;
 	float: left;
-	width: 100%;
+	width: 100vw;
+	position: fixed;
+	z-index: 999;
 	ul li {
 		display: inline-block;
-		margin-right: 2em;
-	}
-	// &:after {
-	// 	content: "";
-	// 	display: block;
-	// 	position: relative;
-	// 	top: 0;
-	// 	right: 0;
-	// 	width: 200px;
-	// 	height: 200px;
-	// 	background: url(../img/logo.jpg);
-	// }
-}
+		margin-right: 3em;
+		&:first-of-type {
+			margin-left: 3em;
+		}//first of nav ul li
+	}//nav ul li
+}//nav
 
 h1 {
 	@include throw();
@@ -83,23 +77,303 @@ h1 {
 	width: 200px;
 	height: 200px;
 	float: right;
-}
+}//h1 logo
 
-main header {
+
+#main-header {
 	background: url(../img/bg-header.jpg) top center fixed;
 	background-size: cover;
 	width: 100%;
-	height: 640px;
+	height: 960px;
 	@include clearfixed();
+}//main-header
+
+
+main section {
+
+	padding-bottom: 100px;
+
+	header {
+		@include span(12);
+		margin: 100px 0px 20px 0px;
+			h2 {
+				@include span(3 of 12);
+				margin: 20px 0px 20px 0px;
+				font-family: $font-heading;
+				font-size: $size-header;
+				color: $warm-black;
+				border-bottom: 1px solid black;
+				&:before {
+					content: "";
+					border-left: 1px solid black;
+					position: absolute;
+					height: 100px;
+				}//border before header
+				span {
+					@include span(12);
+					margin-left: gutter(1.5);
+					color: $warm-black;
+				}//span
+			}//h2	
+	}//main section header
 }
 
 
 #intro {
+
 	@include clearfixed();
-	figure {
-		float: left;
-	}
+
+	header {
+		h2 {
+			@include span(3 at 9 of 12);
+			margin: 100px 0px 20px span(6 of 12);
+		}//h2	
+	}//intro header
+
+
+	img {
+		@include span(6);
+	}//img
+
+	div {
+		@include span(5.5 at 6);
+		margin-left: gutter(6);
+	}//paragraph group
+
 	p {
-		float: left;
-	}
-}
+		&:nth-child(-n+3) {
+			font-size: 20px;
+		}//first 3 paragraphs
+		&:nth-child(n+3) {
+			margin-bottom: 12px;
+		}//starting from 3rd paragraph
+	}//p
+}//intro
+
+#how {
+	@include bg-pale-green();
+	@include clearfixed();
+	@include span(12);
+
+	header {
+		@include span(12);
+		padding-left: 0;
+		h2 {
+			@include span(3 of 12);
+		}//h2	
+	}//intro header
+
+	article {
+		p {
+			margin-left: gutter(2);
+		}
+
+		h3 {
+			font-family: $font-copy;
+			font-size: $size-h3;
+			text-align: center;
+		}//h3
+		&:first-of-type {
+			@include span(4 of 12);
+		}//first article
+		&:nth-child(3) {
+			@include span(4 at 5 of 12);
+		}//second article
+		&:nth-child(4) {
+			@include span(4 at 9 of 12);
+		}//third article
+	}//article group
+
+	figure {
+		width: 300px;
+		height: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}//figure
+}//how section
+
+#context {
+
+	@include bg-dark-grey();
+	@include clearfixed();
+	color: $off-white;
+	@include span(12);
+
+	header {
+
+		padding-left: 0;
+
+		h2 {
+			border-bottom-color: $off-white;
+			&:before {
+				border-color: $off-white;
+			}//border before header	
+		}//h2
+
+		span {
+			color: $off-white;
+		}//span
+	}//header
+
+	p {
+		@include span(4 of 12);
+		margin-left: gutter(4);
+		padding-left: 0;
+	}//p
+
+	img {
+		@include gallery(3 of 12);
+		margin-top: gutter(6);
+	}//img
+
+}//context
+
+#cabin, #common {
+	@include span(12);
+
+	header {
+		padding-left: 0;
+	}//header
+
+	article {
+		@include span(12);
+		p {
+			@include span(3 of 12);
+			margin-left: gutter(4);
+			padding-left: 0;
+		}//p
+	}//article
+
+	figure {
+		@include span(12);
+		img {
+			@include span(6 of 12);
+			@include span(6 at 7 of 12);
+			margin-top: gutter(6);
+		}//img
+	}//figure
+}//cabin and common section
+
+#product {
+
+	@include bg-pale-green();
+	@include span(12);
+
+	figure {
+
+		background: $dark-grey;
+		padding: 50px;
+		width: 960px;
+		height: 800px;
+		text-align: center;
+
+		@include span(10);
+		margin-left: gutter(1);
+
+		img {
+			@include span(12);
+			max-height: 600px;
+			max-width: 960px;
+			display: block;
+			margin-top: 20px;
+			vertical-align: center;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+		}//img box
+
+		#caption {
+			@include span(12);
+			font-size: $size-h3;
+			color: $off-white;
+		}//caption
+
+		#prev, #next {
+			@include span(6);
+			color: $off-white;
+			font-size: 30px;
+			margin-top: 10px;
+			display: inline-block;
+			cursor: pointer;
+		}//previous and next button
+	}//figure
+}//product section
+
+#contact {
+
+	@include bg-dark-grey();
+	@include span(12);
+
+	header {
+
+		padding-left: 0;
+
+		h2 {
+			border-bottom-color: $off-white;
+			&:before {
+				border-color: $off-white;
+			}//border before header	
+		}//h2
+
+		span {
+			color: $off-white;
+		}//span
+	}//header
+
+	form {
+
+		@include span(6 of 12);
+		margin-left: span(1 of 12);
+
+		textarea, input {
+			height: 30px;
+			font-family: $font-copy;
+			color: $off-white;
+			background-color: $warm-grey;
+			border: 1px solid;
+			border-color: $dark-grey;
+			margin-top: 1em;
+		}//textarea and input
+
+		#name {
+			@include span(12);
+		}//name
+		#mail {
+			@include span(12);
+		}//mail
+		#msg {
+			@include span(12);
+			height: 100px;
+		}//msg
+		button {
+			cursor: pointer;
+			color: $pale-green;
+			font-family: $font-heading;
+			background-color: $warm-black;
+			width: 100px;
+			text-align: center;
+			border: 1px solid;
+			border-color: $warm-grey;
+			margin-top: 1em;
+		}
+	}//form
+
+	footer{
+		@include span(4 at 9 of 12);
+		margin-left: span(1 of 12);
+		color: $off-white;
+		ul li a {
+			color: $off-white;
+		}
+		i {
+			font-size: $size-icon;
+			color: $off-white;
+			margin-right: 10px;
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+		}//icon
+	}//footer
+}//contact section
+
