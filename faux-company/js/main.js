@@ -56,14 +56,14 @@ $(document).ready(function() {
 
 				imgBox.finish().animate({
 					opacity: 0,
-					bottom: "10px"
+					top: "-20px"
 				}, 0);
 
 				imgBox.attr("src", images[i]);
 
 				imgBox.animate({
 					opacity: 1,
-					bottom: "0px"
+					top: "0px"
 				}, 1500);
 
 				$("#caption").text(captions[i]);
@@ -75,14 +75,14 @@ $(document).ready(function() {
 
 				imgBox.finish().animate({
 					opacity: 0,
-					bottom: "10px"
+					top: "-20px"
 				}, 0);
 
 				imgBox.attr("src", images[i]);
 
 				imgBox.animate({
 					opacity: 1,
-					bottom: "0px"
+					top: "0px"
 				}, 1500);
 
 				$("#caption").text(captions[i]);
@@ -101,14 +101,14 @@ $(document).ready(function() {
 
 				imgBox.finish().animate({
 					opacity: 0,
-					bottom: "10px"
+					top: "-20px"
 				}, 0);
 
 				imgBox.attr("src", images[i])
 
 				imgBox.animate({
 					opacity: 1, 
-					bottom: "0px"
+					top: "0px"
 				}, 1500);
 
 				$("#caption").text(captions[i]);
@@ -120,14 +120,14 @@ $(document).ready(function() {
 
 				imgBox.finish().animate({
 					opacity: 0,
-					bottom: "10px"
+					top: "-20px"
 				}, 0);
 
 				imgBox.attr("src", images[i]);
 
 				imgBox.animate({
 					opacity: 1,
-					bottom: "0px"
+					top: "0px"
 				}, 1500);
 
 				$("#caption").text(captions[i]);
@@ -144,14 +144,14 @@ $(document).ready(function() {
 
 				imgBox.finish().animate({
 					opacity: 0,
-					bottom: "10px"
+					top: "-20px"
 				}, 0);
 
 				$("#imgBox").attr("src", images[i]);
 
 				imgBox.animate({
 					opacity: 1,
-					bottom: "0px"
+					top: "0px"
 				}, 1500);
 
 				$("#caption").text(captions[i]);
@@ -164,14 +164,14 @@ $(document).ready(function() {
 
 				imgBox.finish().animate({
 					opacity: 0,
-					bottom: "0px"
+					top: "-20px"
 				}, 0);
 
 				$("#imgBox").attr("src", "img/site-plan.jpg");
 
 				imgBox.animate({
 					opacity: 1,
-					bottom: "0px"
+					top: "0px"
 				}, 1500);
 
 				$("#caption").text(captions[0]);

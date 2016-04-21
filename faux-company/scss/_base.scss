@@ -61,7 +61,7 @@ a:active {
 /* ========== Begin Project Styles ==========*/
 
 nav {
-	background: rgba(196,197,199,1);
+	background: $logo-grey;
 	padding: 10px 0px;
 	float: left;
 	width: 100vw;
@@ -72,9 +72,9 @@ nav {
 
 	ul li {
 		display: inline-block;
-		margin-right: 3em;
+		margin-right: 2em;
 		&:first-of-type {
-			margin-left: 3em;
+			margin-left: 2em;
 		}//first of nav ul li
 	}//nav ul li
 }//nav
@@ -281,30 +281,27 @@ main section {
 
 		background: $dark-grey;
 		padding: 50px;
-		width: 960px;
-		height: 800px;
+		// width: 960px;
+		// height: 800px;
 		text-align: center;
 
-		@include span(10);
+		@include span(12);
 		margin-left: gutter(1);
 
 		img {
 			@include span(12);
-			max-height: 600px;
-			max-width: 960px;
-			display: block;
+			// max-height: 600px;
+			// max-width: 960px;
+			// display: block;
 			margin-top: 20px;
-			vertical-align: center;
-			top:0;
-			right:0;
-			bottom:0;
-			left:0;
+			position: relative;
 		}//img box
 
 		#caption {
 			@include span(12);
 			font-size: $size-h3;
 			color: $off-white;
+			margin-top: 20px;
 		}//caption
 
 		#prev, #next {
@@ -394,4 +391,180 @@ main section {
 		}//icon
 	}//footer
 }//contact section
+
+
+/* ========== Begin Breakpoint Styles ==========*/
+
+@include susy-breakpoint($medium) {
+
+	nav {
+		ul li {
+			margin-right: 1em;
+			&:first-of-type {
+				margin-left: 1em;
+			}//first of nav ul li
+		}//nav ul li
+	}//nav
+
+	#how {
+		@include span(12);
+
+		article {
+
+			&:first-of-type {
+				@include span(4 of 12);
+			}//first article
+			&:nth-child(3) {
+				@include span(4 at 5 of 12);
+			}//second article
+			&:nth-child(4) {
+				@include span(4 at 9 of 12);
+			}//third article
+		}//article group
+
+		figure {
+			width: 200px;
+			height: 200px;
+			margin-left: auto;
+			margin-right: auto;
+		}//figure
+	}//how section
+
+	#context {
+
+	img {
+		@include gallery(4 of 12);
+		margin-top: gutter(6);
+	}//img
+
+}//context
+
+	#cabin, #common {
+
+		article {
+			@include span(12);
+			p {
+				&:first-of-type {
+					@include span(5.5 of 12);
+					margin-left: gutter(6);
+				}
+				&:nth-child(3) {
+					@include span(5.5 of 12);
+					margin-left: gutter(6);
+				}
+			}//p
+		}//article
+
+		figure {
+			@include span(12);
+			img {
+				@include span(12);
+				@include span(12);
+				margin-top: gutter(6);
+			}//img
+		}//figure
+	}//cabin and common section
+
+}
+
+@include susy-breakpoint($small) {
+
+	main section {
+
+		header {
+			@include span(5);
+			margin: 100px 0px 20px 0px;
+				h2 {
+					@include span(12);
+					margin: 20px 0px 20px 0px;
+					&:before {
+						content: "";
+						border-left: 1px solid black;
+						position: absolute;
+						height: 100px;
+					}//border before header
+					span {
+						@include span(12);
+						margin-left: gutter(1.5);
+						color: $warm-black;
+					}//span
+				}//h2	
+		}//main section header
+	}
+
+	nav {
+		ul li {
+			margin-right: .5em;
+			&:first-of-type {
+				margin-left: .5em;
+			}//first of nav ul li
+		}//nav ul li
+	}//nav
+
+	#intro {
+		header {
+
+			h2 {
+				@include span(12);
+				margin: 0px 0px 20px 0px;
+			}//h2	
+		}//intro header
+
+		img {
+			@include span(12);
+		}//img
+
+		div {
+			@include span(12);
+			margin-left: gutter(6);
+			margin-top: 30px;
+		}//paragraph group
+
+		p {
+
+			margin-left: gutter(2);
+
+			&:nth-child(-n+3) {
+				font-size: 20px;
+			}//first 3 paragraphs
+			&:nth-child(n+3) {
+				margin-bottom: 12px;
+			}//starting from 3rd paragraph
+		}//p
+	}//intro	
+	#how {
+		@include span(12);
+
+		header {
+			h2{
+				width: 40%;
+			}
+		}
+		article {
+
+			margin-bottom: 30px;
+
+			&:first-of-type {
+				@include span(12);
+			}//first article
+			&:nth-child(3) {
+				@include span(12);
+			}//second article
+			&:nth-child(4) {
+				@include span(12);
+			}//third article
+		}//article group
+
+		figure {
+			width: 250px;
+			height: 250px;
+			margin-left: auto;
+			margin-right: auto;
+		}//figure
+	}//how section
+
+}
+
+
+
 

@@ -81,10 +81,10 @@ nav {
 }
 nav ul li {
   display: inline-block;
-  margin-right: 3em;
+  margin-right: 2em;
 }
 nav ul li:first-of-type {
-  margin-left: 3em;
+  margin-left: 2em;
 }
 
 nav ul:hover > li {
@@ -357,10 +357,8 @@ main section header h2 span {
 #product figure {
   background: #464646;
   padding: 50px;
-  width: 960px;
-  height: 800px;
   text-align: center;
-  width: 83.33333%;
+  width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
@@ -371,15 +369,8 @@ main section header h2 span {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
-  max-height: 600px;
-  max-width: 960px;
-  display: block;
   margin-top: 20px;
-  vertical-align: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
 }
 #product figure #caption {
   width: 100%;
@@ -388,6 +379,7 @@ main section header h2 span {
   padding-right: 0.83333%;
   font-size: 20px;
   color: #ebe1e1;
+  margin-top: 20px;
 }
 #product figure #prev, #product figure #next {
   width: 50%;
@@ -484,4 +476,211 @@ main section header h2 span {
 }
 #contact footer i:last-of-type {
   margin-bottom: 20px;
+}
+
+/* ========== Begin Breakpoint Styles ==========*/
+@media (min-width: 481px) and (max-width: 768px) {
+  nav ul li {
+    margin-right: 1em;
+  }
+  nav ul li:first-of-type {
+    margin-left: 1em;
+  }
+
+  #how {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how article:first-of-type {
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how article:nth-child(3) {
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how article:nth-child(4) {
+    width: 33.33333%;
+    float: right;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how figure {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #context img {
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 1.66667%;
+  }
+  #context img:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+  }
+  #context img:nth-child(3n + 2) {
+    margin-left: 33.33333%;
+    margin-right: -100%;
+    clear: none;
+  }
+  #context img:nth-child(3n + 3) {
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    clear: none;
+  }
+
+  #cabin article, #common article {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #cabin article p:first-of-type, #common article p:first-of-type {
+    width: 45.83333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 1.66667%;
+  }
+  #cabin article p:nth-child(3), #common article p:nth-child(3) {
+    width: 45.83333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 1.66667%;
+  }
+  #cabin figure, #common figure {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #cabin figure img, #common figure img {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 1.66667%;
+  }
+}
+@media (min-width: 1px) and (max-width: 480px) {
+  main section header {
+    width: 41.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin: 100px 0px 20px 0px;
+  }
+  main section header h2 {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin: 20px 0px 20px 0px;
+  }
+  main section header h2:before {
+    content: "";
+    border-left: 1px solid black;
+    position: absolute;
+    height: 100px;
+  }
+  main section header h2 span {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 6.66667%;
+    color: #1e0a0a;
+  }
+
+  nav ul li {
+    margin-right: .5em;
+  }
+  nav ul li:first-of-type {
+    margin-left: .5em;
+  }
+
+  #intro header h2 {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin: 0px 0px 20px 0px;
+  }
+  #intro img {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #intro div {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 1.66667%;
+    margin-top: 30px;
+  }
+  #intro p {
+    margin-left: 5%;
+  }
+  #intro p:nth-child(-n+3) {
+    font-size: 20px;
+  }
+  #intro p:nth-child(n+3) {
+    margin-bottom: 12px;
+  }
+
+  #how {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how header h2 {
+    width: 40%;
+  }
+  #how article {
+    margin-bottom: 30px;
+  }
+  #how article:first-of-type {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how article:nth-child(3) {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how article:nth-child(4) {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #how figure {
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
