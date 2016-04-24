@@ -20,15 +20,35 @@ $( document ).ready(function() {
     var positionX;
     var positionY;
 
+    var shatter = new Audio("audio/c-rogers_glass-shattering.ogg"); //sound by C_Rogers from freesound.com
+    var gunshot = new Audio("audio/xenonn_layered-gunshot.wav"); //sound by Xenonn from freesound.com
+    gunshot.volume = 0.3;
+
+    $('body').click(function() {
+    	gunshot.play(); //play sound effect
+		gunshot.currentTime=0; //stop last sound effect and start new one
+    });
+
+    $(document).on('click', function(e) {
+    	endGame();
+    });
+
+    $('button').on('click', function(e) {
+    	e.stopPropagation();
+    });
+
+
+    // $('button').on('click', function(e) {
+    // 	e.stopPropagation();
+    // });
 
 	function createTarget() {
 
-		var newTarget = $("<div class=target></div>"); //create DOM Element
+		newTarget = $("<div class=target></div>"); //create DOM Element
 
 		positionTarget(newTarget);
 
         // console.log(positionX+" "+positionY);
-
 
 		newTarget.css({	
 			"position": "absolute",
@@ -36,13 +56,20 @@ $( document ).ready(function() {
 			"top": positionY
 		});
 
-
 		newTarget.click(function() { 
-				$(this).remove(); 
-				console.log("working?"); 
-				time = 5;
-				timerBar = 5;
+			shatter.play(); //play sound effect
+			shatter.currentTime=0; //stop last sound effect and start new one
+			$(this).remove(); 
+			console.log("working?"); 
+			countdownBar();
+			targetCount++;
+			console.log(targetCount);
 		});
+
+	    $(newTarget).on('click', function(e) {
+	    	e.stopPropagation();
+	    });
+
 		
 		targets.push(newTarget);
 
@@ -77,11 +104,12 @@ $( document ).ready(function() {
 
 	function countdown() {
 		time = time-1;
-		console.log("countdown time: " +time);
+		console.log("countdown time: " + time);
 		if (time <= 0) {
 			clearInterval(timer);
-			alert("times up, fool");
+			console.log("times up, fool");
 			clearInterval(target);
+			clearInterval(cursorInvisible);
 			$('div').remove();
 			$('body').css("cursor", "default");
 		};
@@ -101,37 +129,66 @@ $( document ).ready(function() {
 	};
 
 	function countdownBar() {
-		if(timerBar == 5) {
+
+			time = 5;
+			timerBar = 5;
+
 			$("#timer").stop().animate({
 				"width": "50%"
-			}, 100, "linear");
-			// $("#timer").css({"width": "50%"});
+			}, 0, 'linear');
+
 			console.log("timerBar? " + timerBar)
-		} else {
+
 			$("#timer").stop().animate({
-				"width": "0"
-			}, 2000, "linear");
-			console.log("hi timerBar: " + timerBar);
-		}
+				"width": "0px"
+			}, 5000, 'linear');
+
+			clearInterval(timer);
+
+			timer = setInterval(countdown, 1000);
+
 	};
 
 	function countdownTimer() {
 		timerBar = timerBar-1;
 	}
 
+	function endGame() {
+		clearInterval(timer);
+		console.log("Game Over");
+		clearInterval(target);
+		clearInterval(cursor);
+		$('div').remove();
+		$('body').css("cursor", "default");
+		$("#timer").stop().animate({
+				"width": "0px"
+		}, 0);
+	}
+
 	$('button').click(function() {
+
 		time = 5;
 		cursorTime = 2;
+		targetCount = 0;
+		$('div').remove();
+		$('body').css("cursor", "default");
+		clearInterval(timer);
+		clearInterval(target);
+		clearInterval(cursor);
+		clearInterval(counter);
 		timer = setInterval(countdown, 1000);
 		target = setInterval(createTarget, 1000);
-		// cursor = setInterval(cursorInvisible, 1000);
+		cursor = setInterval(cursorInvisible, 1000);
+		counter = setInterval(countdownTimer, 1000);
+		countdownBar();
+
 	});
 
 
-	var timer = setInterval(countdown, 1000);
-	var target = setInterval(createTarget, 1000);
-	// var cursor = setInterval(cursorInvisible, 1000);
-	var countBar = setInterval(countdownBar, 100);
-	var counter = setInterval(countdownTimer, 1000);
+	var timer = setInterval(countdown, 1000); //timer for game
+	var target = setInterval(createTarget, 1000); //create target every second
+	var cursor = setInterval(cursorInvisible, 1000); //hide cursor
+	var counter = setInterval(countdownTimer, 1000); //alternative timer?
 
+	countdownBar(); //animate bar to 0
 });
