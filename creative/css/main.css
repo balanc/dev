@@ -1,20 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans|Coda+Caption:800);
 body {
-  background: gray;
+  background: #323232;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+  color: #c8c8c8;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#message {
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+  opacity: 0;
+}
+
+#warning {
+  opacity: 0;
+}
+
+#retry {
+  border: none;
+  border-radius: 5%;
+  color: #c8c8c8;
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  background: #141414;
+  bottom: 10%;
+  left: 45%;
+  position: absolute;
 }
 
 #score {
-  width: 300px;
-  height: 300px;
-  background: blue;
+  font-family: "Coda Caption", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  z-index: -1;
 }
 
 #timer {
   width: 50%;
   height: 2%;
-  background: red;
+  background: #dcd2d2;
   margin: 0 auto;
   position: absolute;
   top: 90%;
@@ -22,10 +51,15 @@ body {
 }
 
 .target {
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
-  background: green;
+  background: url(../img/target.png) 50% 50% no-repeat;
+  background-size: cover;
   position: absolute;
   z-index: 1;
+}
+
+.hole {
+  width: 100px;
+  height: 100px;
+  background: url(../img/shot.png) no-repeat;
 }

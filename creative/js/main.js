@@ -4,12 +4,15 @@ $( document ).ready(function() {
     var user = $("#field");
     var scoreBox = $("#score");
     var body = $("main");
+    var warning = $("#warning");
     var targets = [];
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
     var targetCount = 0;
     var check = true;
     var newTarget;
+    var shot;
+    var size;
 
     var time = 5;
     var cursorTime = 2;
@@ -27,6 +30,7 @@ $( document ).ready(function() {
     $('body').click(function() {
     	gunshot.play(); //play sound effect
 		gunshot.currentTime=0; //stop last sound effect and start new one
+    	// cursorSwitch();
     });
 
     $(document).on('click', function(e) {
@@ -37,10 +41,37 @@ $( document ).ready(function() {
     	e.stopPropagation();
     });
 
+    $('body').click(function() {
+		shot();
+    });
 
-    // $('button').on('click', function(e) {
-    // 	e.stopPropagation();
-    // });
+    function count() {
+    	targetCount++
+    	$("#score").text(targetCount);
+    };
+
+    function shot() {
+    	hole = $("<div class=hole></div>"); //create shot effect
+    	
+    	hole.css({
+			"position": "absolute",
+			"left": event.pageX-50,
+			"top": event.pageY-50,
+    	});
+
+    	$("#field").append(hole);
+
+    	console.log(event.pageX+" "+event.pageY)
+
+   		hole.stop().animate({
+   			opacity: 0
+   		}, 200);
+
+   		setTimeout(
+   			function() {$(".hole").remove();}, 
+   			200
+   		);
+    };
 
 	function createTarget() {
 
@@ -48,12 +79,15 @@ $( document ).ready(function() {
 
 		positionTarget(newTarget);
 
-        // console.log(positionX+" "+positionY);
+		size = (Math.random()*200)+100+"px";
+		console.log("size:" + size)
 
 		newTarget.css({	
 			"position": "absolute",
 			"left": positionX,
-			"top": positionY
+			"top": positionY,
+			"width": size,
+			"height": size
 		});
 
 		newTarget.click(function() { 
@@ -62,8 +96,9 @@ $( document ).ready(function() {
 			$(this).remove(); 
 			console.log("working?"); 
 			countdownBar();
-			targetCount++;
+			count();
 			console.log(targetCount);
+			shot();
 		});
 
 	    $(newTarget).on('click', function(e) {
@@ -96,10 +131,6 @@ $( document ).ready(function() {
         positionX = Math.round(Math.random() * (screenWidth - 100)) + "px";
         positionY = Math.round(Math.random() * (screenHeight - 100)) + "px";
 	};
-
-	// $(body).hover(function() {
-	// 	createTarget();
-	// });
 
 
 	function countdown() {
@@ -151,7 +182,7 @@ $( document ).ready(function() {
 
 	function countdownTimer() {
 		timerBar = timerBar-1;
-	}
+	};
 
 	function endGame() {
 		clearInterval(timer);
@@ -163,13 +194,60 @@ $( document ).ready(function() {
 		$("#timer").stop().animate({
 				"width": "0px"
 		}, 0);
+		message();
+	};
+
+	function message() {
+		if (check) {
+			$("#message").css({
+				opacity: 1
+			});
+			check = false;
+		} else {
+			$("#message").css({
+				opacity: 0
+			});
+			check = true;
+		}
+	};
+
+	function warningMessage() {
+		warning
+			.animate({opacity: 1}, 500)
+			.animate({opacity: 0}, 500)
+			.animate({opacity: 1}, 500)
+			.animate({opacity: 0}, 500)
+			.animate({opacity: 1}, 500)
+			.animate({opacity: 0}, 500)
+			.animate({opacity: 1}, 500)
+			.animate({opacity: 0}, 500);
+		setTimeout(function(){
+			warning.text("3");
+		}, 1000);
+		setTimeout(function(){
+			warning.text("2");
+		}, 2000);
+		setTimeout(function(){
+			warning.text("1");
+		}, 3000);
+	};
+
+	function showIt() {
+	  var n = $("#warning").queue( "fx" );
+	  $( "span" ).text( n.length );
+	  setTimeout( showIt, 100 );
 	}
+
+	setTimeout(warningMessage, 1000);
+	// warningMessage();
+	showIt();
 
 	$('button').click(function() {
 
 		time = 5;
 		cursorTime = 2;
 		targetCount = 0;
+		$('#score').text("");
 		$('div').remove();
 		$('body').css("cursor", "default");
 		clearInterval(timer);
@@ -181,6 +259,7 @@ $( document ).ready(function() {
 		cursor = setInterval(cursorInvisible, 1000);
 		counter = setInterval(countdownTimer, 1000);
 		countdownBar();
+		message();
 
 	});
 
@@ -189,6 +268,5 @@ $( document ).ready(function() {
 	var target = setInterval(createTarget, 1000); //create target every second
 	var cursor = setInterval(cursorInvisible, 1000); //hide cursor
 	var counter = setInterval(countdownTimer, 1000); //alternative timer?
-
 	countdownBar(); //animate bar to 0
 });
