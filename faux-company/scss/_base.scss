@@ -281,18 +281,19 @@ main section {
 
 		background: $dark-grey;
 		padding: 50px;
-		// width: 960px;
-		// height: 800px;
+		width: 960px;
+		height: 800px;
 		text-align: center;
 
 		@include span(12);
-		margin-left: gutter(1);
 
 		img {
 			@include span(12);
 			// max-height: 600px;
 			// max-width: 960px;
-			// display: block;
+			width: 100%;
+			height: auto;
+			display: block;
 			margin-top: 20px;
 			position: relative;
 		}//img box
@@ -494,9 +495,11 @@ main section {
 
 	nav {
 		ul li {
-			margin-right: .5em;
+			@include span(4 of 12);
+			margin-top: 0.25em;
+			margin-right: 0;
 			&:first-of-type {
-				margin-left: .5em;
+				margin-left: 0;
 			}//first of nav ul li
 		}//nav ul li
 	}//nav
@@ -562,6 +565,127 @@ main section {
 			margin-right: auto;
 		}//figure
 	}//how section
+
+	#context {
+
+		header {
+			
+			@include span(12);
+			padding-left: 0;
+
+			h2 {
+				width: 40%;
+			}//h2
+
+			span {
+				color: $off-white;
+			}//span
+		}//header
+
+		p {
+			@include span(12);
+			padding-left: 0;
+		}//p
+
+		img {
+			@include gallery(6);
+			margin-top: gutter(6);
+		}//img
+
+	}//context
+
+	#cabin, #common {
+		@include span(12);
+
+		header {
+
+			@include span(12);
+			padding-left: 0;
+			h2 {
+				width: 40%;
+			}//h2
+		}//header
+
+		article {
+			@include span(12);
+			p {
+				@include span(12);
+				margin-left: gutter(4);
+				padding-left: 0;
+			}//p
+		}//article
+
+		figure {
+			@include span(12);
+			img {
+				@include span(12);
+				margin-top: gutter(6);
+			}//img
+		}//figure
+	}//cabin and common section
+
+	#contact {
+
+		header {
+
+			@include span(12);
+			padding-left: 0;
+			h2 {
+				width: 40%;
+			}//h2
+		}//header
+
+		form {
+
+			@include span(12);
+			margin-left: 0;
+
+			textarea, input {
+				@include span(12);
+				height: 30px;
+				font-family: $font-copy;
+				color: $off-white;
+				background-color: $warm-grey;
+				border: 1px solid;
+				border-color: $dark-grey;
+				margin-top: 1em;
+			}//textarea and input
+
+			#name {
+				@include span(12);
+			}//name
+			#mail {
+				@include span(12);
+			}//mail
+			#msg {
+				@include span(12);
+				height: 100px;
+			}//msg
+			button {
+				cursor: pointer;
+				color: $pale-green;
+				font-family: $font-heading;
+				background-color: $warm-black;
+				width: 100px;
+				text-align: center;
+				border: 1px solid;
+				border-color: $warm-grey;
+				margin-top: 1em;
+			}
+		}//form
+
+		footer{
+			@include span(12);
+			margin-left: 0;
+			text-align: center;
+
+			ul li {
+				display: inline-block;
+				margin-top: 50px;
+				margin-right: 10px;
+			}
+		}//footer
+	}//contact section
 
 }
 

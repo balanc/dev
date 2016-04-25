@@ -357,18 +357,22 @@ main section header h2 span {
 #product figure {
   background: #464646;
   padding: 50px;
+  width: 960px;
+  height: 800px;
   text-align: center;
   width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
-  margin-left: 10%;
 }
 #product figure img {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
+  width: 100%;
+  height: auto;
+  display: block;
   margin-top: 20px;
   position: relative;
 }
@@ -610,10 +614,15 @@ main section header h2 span {
   }
 
   nav ul li {
-    margin-right: .5em;
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 0.25em;
+    margin-right: 0;
   }
   nav ul li:first-of-type {
-    margin-left: .5em;
+    margin-left: 0;
   }
 
   #intro header h2 {
@@ -682,5 +691,161 @@ main section header h2 span {
     height: 250px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #context header {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    padding-left: 0;
+  }
+  #context header h2 {
+    width: 40%;
+  }
+  #context header span {
+    color: #ebe1e1;
+  }
+  #context p {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    padding-left: 0;
+  }
+  #context img {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 1.66667%;
+  }
+  #context img:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+  }
+  #context img:nth-child(2n + 2) {
+    margin-left: 50%;
+    margin-right: -100%;
+    clear: none;
+  }
+
+  #cabin, #common {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #cabin header, #common header {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    padding-left: 0;
+  }
+  #cabin header h2, #common header h2 {
+    width: 40%;
+  }
+  #cabin article, #common article {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #cabin article p, #common article p {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 2.5%;
+    padding-left: 0;
+  }
+  #cabin figure, #common figure {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #cabin figure img, #common figure img {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 1.66667%;
+  }
+
+  #contact header {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    padding-left: 0;
+  }
+  #contact header h2 {
+    width: 40%;
+  }
+  #contact form {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 0;
+  }
+  #contact form textarea, #contact form input {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    height: 30px;
+    font-family: "Source Sans Pro:400", sans-serif;
+    color: #ebe1e1;
+    background-color: #3c3232;
+    border: 1px solid;
+    border-color: #464646;
+    margin-top: 1em;
+  }
+  #contact form #name {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #contact form #mail {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  #contact form #msg {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    height: 100px;
+  }
+  #contact form button {
+    cursor: pointer;
+    color: #c0ccb5;
+    font-family: "Homenaje", sans-serif;
+    background-color: #1e0a0a;
+    width: 100px;
+    text-align: center;
+    border: 1px solid;
+    border-color: #3c3232;
+    margin-top: 1em;
+  }
+  #contact footer {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-left: 0;
+    text-align: center;
+  }
+  #contact footer ul li {
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 10px;
   }
 }
