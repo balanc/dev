@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow|Convergence|Cagliostro);
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow|Convergence|Cagliostro|Black+Ops+One);
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -88,14 +88,15 @@ body {
   overflow: hidden;
 }
 body nav {
+  height: 70px;
   text-align: center;
 }
 body nav ul li {
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: "Convergence", sans-serif;
   display: inline-block;
-  padding-right: 20px;
-  font-size: 20px;
+  padding-right: 50px;
+  font-size: 2em;
 }
 
 main {
@@ -117,7 +118,16 @@ header, h2, h3 {
   text-align: center;
 }
 
-h1 {
+#logo header {
+  width: 100%;
+  height: 600px;
+  display: table;
+}
+#logo header h1 {
+  font-family: "Black Ops One", sans-serif;
+  font-size: 7em;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -148,12 +158,6 @@ figure:hover:before {
   -moz-animation: expandFade 0.4s ease-out 0s 1 forwards;
   -webkit-animation: expandFade 0.4s ease-out 0s 1 forwards;
   animation: expandFade 0.4s ease-out 0s 1 forwards;
-}
-
-#logo {
-  background: gray;
-  width: 100%;
-  height: 200px;
 }
 
 #name1 {
@@ -362,6 +366,10 @@ aside {
   -webkit-transform: translateZ(-500px) scale(4);
   transform: translateZ(75px) scale(0.8);
   z-index: 2;
+}
+
+#group0 {
+  z-index: 6;
 }
 
 #group1 header, #group3 header {

@@ -281,16 +281,12 @@ main section {
 
 		background: $dark-grey;
 		padding: 50px;
-		width: 960px;
-		height: 800px;
 		text-align: center;
 
 		@include span(12);
 
 		img {
 			@include span(12);
-			// max-height: 600px;
-			// max-width: 960px;
 			width: 100%;
 			height: auto;
 			display: block;
@@ -659,19 +655,7 @@ main section {
 			}//mail
 			#msg {
 				@include span(12);
-				height: 100px;
 			}//msg
-			button {
-				cursor: pointer;
-				color: $pale-green;
-				font-family: $font-heading;
-				background-color: $warm-black;
-				width: 100px;
-				text-align: center;
-				border: 1px solid;
-				border-color: $warm-grey;
-				margin-top: 1em;
-			}
 		}//form
 
 		footer{

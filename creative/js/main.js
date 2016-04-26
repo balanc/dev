@@ -1,21 +1,20 @@
 $( document ).ready(function() {
 
-    // console.log( "ready!" );
     var user = $("#field");
     var scoreBox = $("#score");
     var body = $("main");
-    var warning = $("#warning");
+    var warning = $("#warning").children();
     var targets = [];
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
-    var targetCount = 0;
-    var check = true;
+    var targetCount = 0; 
+    var endFlag = true;
     var newTarget;
     var shot;
     var size;
 
     var time = 5;
-    var cursorTime = 2;
+    var cursorTime = 7;
     var timerBar = 5;
     var cssleft = [];
     var csstop = [];
@@ -27,29 +26,39 @@ $( document ).ready(function() {
     var gunshot = new Audio("audio/xenonn_layered-gunshot.wav"); //sound by Xenonn from freesound.com
     gunshot.volume = 0.3;
 
-    $('body').click(function() {
+  	$('body').click(function() {
+
     	gunshot.play(); //play sound effect
 		gunshot.currentTime=0; //stop last sound effect and start new one
-    	// cursorSwitch();
+		shot(); //position bullet hole over clicked area
+
     });
 
-    $(document).on('click', function(e) {
-    	endGame();
-    });
+    //if game has ended, do not display a new game over screen
+    if (endFlag) {
 
+    	$(document).on('click', function(e) {
+    		endGame();
+    	});
+
+    	endFlag = false;
+    }
+
+    //stop game over screen if button is clicked
     $('button').on('click', function(e) {
+
     	e.stopPropagation();
     });
 
-    $('body').click(function() {
-		shot();
-    });
 
+    //function to keep track of and display amount of targets destroyed
     function count() {
+
     	targetCount++
-    	$("#score").text(targetCount);
+    	scoreBox.text(targetCount);
     };
 
+    //function for clicking effect
     function shot() {
     	hole = $("<div class=hole></div>"); //create shot effect
     	
@@ -61,8 +70,6 @@ $( document ).ready(function() {
 
     	$("#field").append(hole);
 
-    	console.log(event.pageX+" "+event.pageY)
-
    		hole.stop().animate({
    			opacity: 0
    		}, 200);
@@ -73,14 +80,14 @@ $( document ).ready(function() {
    		);
     };
 
+    //function to create new targets and position within screen
 	function createTarget() {
 
 		newTarget = $("<div class=target></div>"); //create DOM Element
 
-		positionTarget(newTarget);
+		positionTarget(newTarget); //get random position
 
-		size = (Math.random()*200)+100+"px";
-		console.log("size:" + size)
+		size = (Math.random()*200)+100+"px"; //get random size between 100 and 300px
 
 		newTarget.css({	
 			"position": "absolute",
@@ -88,77 +95,68 @@ $( document ).ready(function() {
 			"top": positionY,
 			"width": size,
 			"height": size
-		});
+		});//attach random position and size to target
 
+		//function to remove targets if clicked
 		newTarget.click(function() { 
 			shatter.play(); //play sound effect
 			shatter.currentTime=0; //stop last sound effect and start new one
-			$(this).remove(); 
-			console.log("working?"); 
-			countdownBar();
-			count();
-			console.log(targetCount);
-			shot();
+			$(this).toggle(
+					'explode', 
+					{"pieces": 25 }, 400) //break target visually
+			$(this).remove(); //remove target from DOM
+			countdownBar(); //reset timer to 5 seconds if target is clicked
+			count(); //increase target count
+			shot(); //audible cue
 		});
 
 	    $(newTarget).on('click', function(e) {
-	    	e.stopPropagation();
+	    	e.stopPropagation(); //stop from ending game if target is clicked
 	    });
 
-		
-		targets.push(newTarget);
+		$("#field").append(newTarget); //add target to DOM
 
-		$("#field").append(newTarget);
-
-		newTarget.animate({
-			opacity: 0
-		}, 500);
-
-		// console.log(targets)
-
-		var n = $("div").length;
-
-
-		var left = $(".target").css("left");
-		var top = $(".target").css("top");
-		cssleft.push(left);
-		csstop.push(top);
-		// console.log("left:"+cssleft+" top:"+csstop);
+		//if enough targets are destroyed, game gets harder
+		if (targetCount >= 20) {
+			newTarget.animate({
+				opacity: 0
+			}, 500);			
+		}
 
 	};
 
+	//function to position targets
 	function positionTarget(newTarget) {
-        positionX = Math.round(Math.random() * (screenWidth - 100)) + "px";
-        positionY = Math.round(Math.random() * (screenHeight - 100)) + "px";
+
+        positionX = Math.round(Math.random() * (screenWidth - 200)) + "px";
+        positionY = Math.round(Math.random() * (screenHeight - 200)) + "px";
+
 	};
 
-
+	//function to end game if time reaches 0;
 	function countdown() {
-		time = time-1;
-		console.log("countdown time: " + time);
+
+		time = time-1; //decrease time by 1
+
 		if (time <= 0) {
-			clearInterval(timer);
-			console.log("times up, fool");
-			clearInterval(target);
-			clearInterval(cursorInvisible);
-			$('div').remove();
-			$('body').css("cursor", "default");
-		};
+			endGame();
+		}; //if time = 0, end the game
+
 	};
 
+	//function to make cursor invisible
 	function cursorInvisible() {
 
-		cursorTime = cursorTime-1;
-		// console.log("cursorTime: " + cursorTime);
+		cursorTime = cursorTime-1; //decrease time by 1
 
 		if(cursorTime == 0) {
 			$('body').css("cursor", "none");
-			console.log("Finally invisible?");
-			clearInterval(cursorInvisible);
-		};
+			clearInterval(cursor);
+		}; //if time = 0, cursor disappears
 
 	};
 
+	//function to animate a visual time bar
 	function countdownBar() {
 
 			time = 5;
@@ -167,8 +165,6 @@ $( document ).ready(function() {
 			$("#timer").stop().animate({
 				"width": "50%"
 			}, 0, 'linear');
-
-			console.log("timerBar? " + timerBar)
 
 			$("#timer").stop().animate({
 				"width": "0px"
@@ -180,37 +176,36 @@ $( document ).ready(function() {
 
 	};
 
+	//function to reduce time for animated time bar
 	function countdownTimer() {
+
 		timerBar = timerBar-1;
+
 	};
 
+	//function to end game and clear all necessary intervals and reset screen
 	function endGame() {
+
 		clearInterval(timer);
-		console.log("Game Over");
 		clearInterval(target);
 		clearInterval(cursor);
-		$('div').remove();
-		$('body').css("cursor", "default");
+		clearTimeout(warnTimeout);
+		warning.finish();
+
+		scoreBox.text("Targets Destroyed: " + targetCount);
+
+		$('.target').remove();
+
+		$('body').css("cursor", "crosshair");
+
 		$("#timer").stop().animate({
 				"width": "0px"
 		}, 0);
-		message();
+
+		$("#message").css({"display": "block"});
 	};
 
-	function message() {
-		if (check) {
-			$("#message").css({
-				opacity: 1
-			});
-			check = false;
-		} else {
-			$("#message").css({
-				opacity: 0
-			});
-			check = true;
-		}
-	};
-
+	//function to flash warning message before cursor goes invisible
 	function warningMessage() {
 		warning
 			.animate({opacity: 1}, 500)
@@ -232,41 +227,41 @@ $( document ).ready(function() {
 		}, 3000);
 	};
 
-	function showIt() {
-	  var n = $("#warning").queue( "fx" );
-	  $( "span" ).text( n.length );
-	  setTimeout( showIt, 100 );
-	}
-
-	setTimeout(warningMessage, 1000);
-	// warningMessage();
-	showIt();
-
+	//function to reset game field when button is clicked
 	$('button').click(function() {
 
 		time = 5;
-		cursorTime = 2;
+		cursorTime = 7;
 		targetCount = 0;
-		$('#score').text("");
-		$('div').remove();
-		$('body').css("cursor", "default");
+
+		scoreBox.text("");
+		$('.target').remove();
+		$('body').css("cursor", "crosshair");
+
 		clearInterval(timer);
 		clearInterval(target);
 		clearInterval(cursor);
 		clearInterval(counter);
+
 		timer = setInterval(countdown, 1000);
-		target = setInterval(createTarget, 1000);
+		target = setInterval(createTarget, 500);
 		cursor = setInterval(cursorInvisible, 1000);
 		counter = setInterval(countdownTimer, 1000);
-		countdownBar();
-		message();
+		warnTimeout = setTimeout(warningMessage, 3000);
 
+		countdownBar();
+
+		$("#message").css({"display": "none"});
+		warning.text("Are You Ready?");
+		
 	});
 
-
+	//start game functions
 	var timer = setInterval(countdown, 1000); //timer for game
-	var target = setInterval(createTarget, 1000); //create target every second
+	var target = setInterval(createTarget, 500); //create target every second
 	var cursor = setInterval(cursorInvisible, 1000); //hide cursor
 	var counter = setInterval(countdownTimer, 1000); //alternative timer?
+	var warnTimeout = setTimeout(warningMessage, 3000);
 	countdownBar(); //animate bar to 0
+
 });
