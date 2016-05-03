@@ -84,17 +84,14 @@ a:active {
   display: none;
 }
 
-body {
-  overflow: hidden;
-}
 body nav {
   width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
-  position: absolute;
-  height: 70px;
-  background: #3c3c3c;
+  padding-bottom: 20px;
+  position: fixed;
+  background: #282828;
   text-align: center;
   z-index: 999;
 }
@@ -107,16 +104,22 @@ body nav ul li {
 }
 
 main {
-  overflow: auto;
   width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
 main ul li {
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
   margin-top: 50px;
   font-family: "Archivo Narrow", sans-serif;
   font-size: 20px;
+}
+main ul li h2 {
+  height: 70px;
 }
 main a, main article {
   text-align: center;
@@ -127,6 +130,7 @@ header, h2, h3 {
   font-family: "Convergence", sans-serif;
   color: #e6e6e6;
   text-align: center;
+  vertical-align: middle;
 }
 
 #group0 header {
@@ -151,9 +155,6 @@ figure {
 
 article {
   opacity: 0;
-  margin-left: 50px;
-  left: 50px;
-  width: 100%;
 }
 
 figure:before {
@@ -208,57 +209,7 @@ figure:hover:before {
   padding-right: 0.83333%;
 }
 
-.parallax {
-  height: 500px;
-  /* fallback for older browsers */
-  height: 100vh;
-  overflow-y: scroll;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-}
-
-.group:before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: 50% 50% / cover;
-}
-
-.group {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  position: relative;
-  min-height: 100vh;
-  width: 100vw;
-  /*vertical width*/
-  transform-style: inherit;
-  background: 50% 50% / cover;
-}
-
-.parallaxLayer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-/* ---------- Parallax Depth Styles -----------*/
-.fore1 {
-  -webkit-transform: translateZ(0px) scale(1);
-  transform: translateZ(0px) scale(1);
-  z-index: 9;
-}
-
-.deep2 {
-  -webkit-transform: translateZ(-500px) scale(4);
-  transform: translateZ(75px) scale(0.8);
-  z-index: 2;
-}
-
+/* ---------- Future implementation of CSS Parallax -----------*/
 /* ------------Begin Group Styles------------- */
 #group0 {
   z-index: 6;
@@ -267,9 +218,9 @@ figure:hover:before {
 #group1 header, #group3 header {
   text-align: center;
   font-size: 30px;
-  position: absolute;
-  top: 50%;
   width: 100vw;
+  height: 100vh;
+  display: table-cell;
 }
 
 #group1 {
@@ -282,7 +233,7 @@ figure:hover:before {
 #group2 {
   z-index: 6;
   /* slide under groups 1 and 3 */
-  min-height: 215vh;
+  min-height: 200vh;
 }
 
 #group3 {
@@ -304,13 +255,6 @@ figure:hover:before {
     min-height: 345vh;
   }
 
-  article {
-    opacity: 0;
-    margin-left: 50px;
-    left: 50px;
-    width: 93%;
-  }
-
   .parallaxLayer li {
     width: 50%;
     float: left;
@@ -322,23 +266,29 @@ figure:hover:before {
   }
 }
 @media (min-width: 1px) and (max-width: 649px) {
-  #group2 {
-    min-height: 555vh;
-  }
-
-  article {
-    opacity: 0;
-    margin-left: 50px;
-    left: 50px;
-    width: 95%;
-  }
-
-  .parallaxLayer li {
+  body nav {
     width: 100%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
   }
+  body nav ul li {
+    padding-right: 0px;
+    font-size: 1.5em;
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  #group2 {
+    min-height: 555vh;
+  }
+
   .parallaxLayer li:last-of-type {
     margin-bottom: 100px;
   }

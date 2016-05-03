@@ -12,7 +12,6 @@ var child = document.getElementById('para');
 
 			$("article", this).finish().animate({
 				opacity: 1,
-				'margin-left': '0px',
 			});
 
 			$(this).siblings().finish().animate({
@@ -25,7 +24,6 @@ var child = document.getElementById('para');
 
 			$("article", this).finish().animate({
 				opacity: 0,
-				'margin-left': '50px',
 			});
 
 			$(this).siblings().finish().animate({
@@ -40,17 +38,17 @@ var child = document.getElementById('para');
 child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";
 
 /* Smooth Scrolling courtesy of https://paulund.co.uk/smooth-scroll-to-internal-links-with-jquery*/
-	// $('a[href^="#"]').on('click',function (e) {
-	//     e.preventDefault();
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
 
-	//     var target = this.hash;
-	//     var $target = $(target);
+	    var target = this.hash;
+	    var $target = $(target);
 
-	//     $('html, body').stop().animate({
-	//         'scrollTop': $target.offset().top
-	//     }, 900, 'swing', function () {
-	//         window.location.hash = target;
-	//     });
-	// });
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
 
 })

@@ -4,6 +4,7 @@ $( document ).ready(function() {
     var scoreBox = $("#score");
     var body = $("main");
     var warning = $("#warning").children();
+    var message = $("#message").children();
     var targets = [];
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
@@ -28,8 +29,6 @@ $( document ).ready(function() {
 
   	$('body').click(function() {
 
-    	gunshot.play(); //play sound effect
-		gunshot.currentTime=0; //stop last sound effect and start new one
 		shot(); //position bullet hole over clicked area
 
     });
@@ -63,10 +62,12 @@ $( document ).ready(function() {
     	hole = $("<div class=hole></div>"); //create shot effect
     	
     	hole.css({
-			"position": "absolute",
 			"left": event.pageX-50,
 			"top": event.pageY-50,
     	});
+
+    	gunshot.play(); //play sound effect
+		gunshot.currentTime=0; //stop last sound effect and start new one
 
     	$("#field").append(hole);
 
@@ -107,7 +108,7 @@ $( document ).ready(function() {
 			$(this).remove(); //remove target from DOM
 			countdownBar(); //reset timer to 5 seconds if target is clicked
 			count(); //increase target count
-			shot(); //audible cue
+			shot(); //audible and visual cue
 		});
 
 	    $(newTarget).on('click', function(e) {
@@ -202,7 +203,16 @@ $( document ).ready(function() {
 				"width": "0px"
 		}, 0);
 
-		$("#message").css({"display": "block"});
+		$("#message").css({"display": "block"})
+
+		$("#text").text("Game Over").css({
+			"display": "block",
+			"font-size": "100px",
+			"margin-top": "3.5em",
+			"width": "100%"
+		});
+
+		$("span").text("Retry");
 	};
 
 	//function to flash warning message before cursor goes invisible
@@ -246,7 +256,7 @@ $( document ).ready(function() {
 		timer = setInterval(countdown, 1000);
 		target = setInterval(createTarget, 500);
 		cursor = setInterval(cursorInvisible, 1000);
-		counter = setInterval(countdownTimer, 1000);
+		ounter = setInterval(countdownTimer, 1000);
 		warnTimeout = setTimeout(warningMessage, 3000);
 
 		countdownBar();
@@ -256,12 +266,13 @@ $( document ).ready(function() {
 		
 	});
 
+
+
 	//start game functions
-	var timer = setInterval(countdown, 1000); //timer for game
-	var target = setInterval(createTarget, 500); //create target every second
-	var cursor = setInterval(cursorInvisible, 1000); //hide cursor
-	var counter = setInterval(countdownTimer, 1000); //alternative timer?
-	var warnTimeout = setTimeout(warningMessage, 3000);
-	countdownBar(); //animate bar to 0
+	var timer; //timer for game
+	var target; //create target every second
+	var cursor; //hide cursor
+	var counter; //alternative timer?
+	var warnTimeout; //warning message before invisible cursor
 
 });

@@ -34,10 +34,6 @@ body {
 	font-size: 14px;
 	background: $bg-color;
 	color: $grey;
-	main section ul {
-		// margin-left: 50px;
-		// margin-right: 50px;
-	}
 }
 
 figure {
@@ -79,12 +75,12 @@ a:active {
 }
 
 body {
-	overflow: hidden;
+	// overflow: hidden;
 	nav {
 		@include span (12);
-	    position: absolute;
-	    height: 70px;
-	    background: $bg-color;
+		padding-bottom: 20px;
+		position: fixed;
+	    background: $nav-color;
 	    text-align: center;
 	    z-index: 999;
 		ul {
@@ -102,15 +98,15 @@ body {
 
 
 main {
-	overflow: auto;
 	@include span(12);
 	ul li {
+		@include span(12);
 		margin-top: 50px;
 		font-family: $font-copy;
 		font-size: 20px;
-		// text-align: center;
-		// width: 100%;
-		// @include animation (expandFade 5s infinite ease-in 1s forwards);
+		h2 {
+			height: 70px;
+		}
 	}//project list items
 	a, article {
 		text-align: center;
@@ -122,6 +118,7 @@ header, h2, h3 {
 	font-family: $font-heading;
 	color: $off-white;
 	text-align: center;
+	vertical-align: middle;
 }//header, h2, h3
 
 #group0 header {
@@ -146,9 +143,6 @@ figure {
 
 article {
   opacity: 0;
-  margin-left: 50px;
-  left: 50px;
-  width: 100%;
 }//all project descriptions
 
 figure:before {
@@ -179,56 +173,58 @@ figure:hover:before {
 	@include span(4);
 }
 
-.parallax {
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    // overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-perspective: 300px;
-    perspective: 300px;
-  }
 
-.group:before { 
-    content: " "; 
-    position: absolute; 
-    top: 0;
-    bottom: 0; 
-    left: 0; 
-    right: 0; 
-    background: 50% 50% / cover;
-  }
+/* ---------- Future implementation of CSS Parallax -----------*/
+// .parallax {
+//     height: 500px; /* fallback for older browsers */
+//     height: 100vh;
+//     // overflow-x: hidden;
+//     overflow-y: scroll;
+//     -webkit-perspective: 300px;
+//     perspective: 300px;
+//   }
 
-.group {
-	-webkit-transition: -webkit-transform 0.5s;
- 	transition: transform 0.5s;
-    position: relative; 
-    min-height: 100vh; 
-    width: 100vw; /*vertical width*/ 
-    transform-style: inherit; 
-    background: 50% 50% / cover;
-  }
+// .group:before { 
+//     content: " "; 
+//     position: absolute; 
+//     top: 0;
+//     bottom: 0; 
+//     left: 0; 
+//     right: 0; 
+//     background: 50% 50% / cover;
+//   }
 
-.parallaxLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+// .group {
+// 	-webkit-transition: -webkit-transform 0.5s;
+//  	transition: transform 0.5s;
+//     position: relative; 
+//     min-height: 100vh; 
+//     width: 100vw; /*vertical width*/ 
+//     transform-style: inherit; 
+//     background: 50% 50% / cover;
+//   }
 
-/* ---------- Parallax Depth Styles -----------*/
+// .parallaxLayer {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//   }
 
-.fore1 {
-  -webkit-transform: translateZ(0px) scale(1);
-  transform: translateZ(0px) scale(1);
-  z-index: 9;
-}
+// /* ---------- Parallax Depth Styles -----------*/
 
-.deep2 {
-  -webkit-transform: translateZ(-500px) scale(4);
-  transform: translateZ(75px) scale(0.8);
-  z-index: 2;
-}
+// .fore1 {
+//   -webkit-transform: translateZ(0px) scale(1);
+//   transform: translateZ(0px) scale(1);
+//   z-index: 9;
+// }
+
+// .deep2 {
+//   -webkit-transform: translateZ(-500px) scale(4);
+//   transform: translateZ(75px) scale(0.8);
+//   z-index: 2;
+// }
 
 
 /* ------------Begin Group Styles------------- */
@@ -245,9 +241,9 @@ figure:hover:before {
 #group1 header, #group3 header {
     text-align: center;
     font-size: 30px;
-    position: absolute;
-    top: 50%;
     width: 100vw;
+    height: 100vh;
+    display: table-cell;
 }
 
 #group1 {
@@ -260,7 +256,7 @@ figure:hover:before {
 
 #group2 {
   z-index: 6; /* slide under groups 1 and 3 */
-  min-height: 215vh;
+  min-height: 200vh;
 }
 
 
@@ -285,14 +281,7 @@ figure:hover:before {
 
 	#group2 {
 		min-height: 345vh;
-	}
-
-	article {
-	  opacity: 0;
-	  margin-left: 50px;
-	  left: 50px;
-	  width: 93%;
-	}//all project descriptions
+	}//group2
 
 	.parallaxLayer li {
 		@include span(6 of 12);
@@ -306,16 +295,26 @@ figure:hover:before {
 
 @include susy-breakpoint($small) {
 
+	body {
+		nav {
+			@include span (12);
+			ul {
+				li{
+				    padding-right: 0px;
+				    font-size: 1.5em;
+				    @include span(6);
+				}//li
+			}//ul
+		}//main navigation
+	}//body
+
+	h1 {
+		font-size: 4em;
+	}//h1
+
 	#group2 {
 		min-height: 555vh;
-	}
-
-	article {
-	  opacity: 0;
-	  margin-left: 50px;
-	  left: 50px;
-	  width: 95%;
-	}//all project descriptions
+	}//group2
 
 	.parallaxLayer li {
 		@include span(12);
