@@ -74,6 +74,8 @@ a:active {
 	display: none;
 }
 
+/* ========== Begin Page Styles ==========*/
+
 body {
 	// overflow: hidden;
 	nav {
@@ -100,7 +102,6 @@ body {
 main {
 	@include span(12);
 	ul li {
-		@include span(12);
 		margin-top: 50px;
 		font-family: $font-copy;
 		font-size: 20px;
@@ -152,7 +153,7 @@ figure:before {
 	height: 300px;
 	border: 10px solid;
 	opacity: 0;
-}
+}//blue outline
 
 figure:hover:before {
 	@include animation (expandFade 0.4s ease-out 0s 1 forwards);
@@ -169,9 +170,12 @@ figure:hover:before {
 	}
 }
 
-.parallaxLayer li {
-	@include span(4);
-}
+.parallaxLayer {
+	@include span (12);
+	li {
+		@include span (4 of 12);
+	}//li
+}//parallaxLayer
 
 
 /* ---------- Future implementation of CSS Parallax -----------*/
@@ -294,6 +298,10 @@ figure:hover:before {
 }//medium breakpoint
 
 @include susy-breakpoint($small) {
+
+	article {
+	  opacity: 1;
+	}//all project descriptions
 
 	body {
 		nav {

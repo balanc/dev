@@ -84,6 +84,7 @@ a:active {
   display: none;
 }
 
+/* ========== Begin Page Styles ==========*/
 body nav {
   width: 100%;
   float: left;
@@ -110,10 +111,6 @@ main {
   padding-right: 0.83333%;
 }
 main ul li {
-  width: 100%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
   margin-top: 50px;
   font-family: "Archivo Narrow", sans-serif;
   font-size: 20px;
@@ -202,6 +199,12 @@ figure:hover:before {
     opacity: 0;
   }
 }
+.parallaxLayer {
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
 .parallaxLayer li {
   width: 33.33333%;
   float: left;
@@ -266,6 +269,10 @@ figure:hover:before {
   }
 }
 @media (min-width: 1px) and (max-width: 649px) {
+  article {
+    opacity: 1;
+  }
+
   body nav {
     width: 100%;
     float: left;
@@ -289,6 +296,12 @@ figure:hover:before {
     min-height: 555vh;
   }
 
+  .parallaxLayer li {
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
   .parallaxLayer li:last-of-type {
     margin-bottom: 100px;
   }
