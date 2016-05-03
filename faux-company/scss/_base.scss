@@ -429,12 +429,16 @@ main section {
 
 	#context {
 
+	p {
+		@include span(6 of 12);
+	}//p
+
 	img {
 		@include gallery(4 of 12);
 		margin-top: gutter(6);
 	}//img
 
-}//context
+	}//context
 
 	#cabin, #common {
 
@@ -469,22 +473,11 @@ main section {
 	main section {
 
 		header {
-			@include span(5);
-			margin: 100px 0px 20px 0px;
 				h2 {
-					@include span(12);
-					margin: 20px 0px 20px 0px;
+					@include span(6 of 12);
 					&:before {
-						content: "";
-						border-left: 1px solid black;
-						position: absolute;
-						height: 100px;
+						height: 80px;
 					}//border before header
-					span {
-						@include span(12);
-						margin-left: gutter(1.5);
-						color: $warm-black;
-					}//span
 				}//h2	
 		}//main section header
 	}
@@ -514,14 +507,12 @@ main section {
 		}//img
 
 		div {
-			@include span(12);
+			@include span(11.5);
 			margin-left: gutter(6);
 			margin-top: 30px;
 		}//paragraph group
 
 		p {
-
-			margin-left: gutter(2);
 
 			&:nth-child(-n+3) {
 				font-size: 20px;
@@ -580,7 +571,7 @@ main section {
 
 		p {
 			@include span(12);
-			padding-left: 0;
+			margin-left: 0;
 		}//p
 
 		img {
@@ -606,8 +597,8 @@ main section {
 			@include span(12);
 			p {
 				@include span(12);
-				margin-left: gutter(4);
-				padding-left: 0;
+				margin-left: 0;
+				margin-bottom: gutter(6);
 			}//p
 		}//article
 

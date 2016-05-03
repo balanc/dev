@@ -125,15 +125,15 @@ main section {
 main section header {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   margin: 100px 0px 20px 0px;
 }
 main section header h2 {
   width: 25%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   margin: 20px 0px 20px 0px;
   font-family: "Homenaje", sans-serif;
   font-size: 30px;
@@ -149,9 +149,9 @@ main section header h2:before {
 main section header h2 span {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-left: 6.66667%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-left: 11.11111%;
   color: #1e0a0a;
 }
 
@@ -163,22 +163,22 @@ main section header h2 span {
 #intro header h2 {
   width: 25%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   margin: 0px 0px 20px 50%;
 }
 #intro img {
   width: 50%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #intro div {
   width: 45.83333%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-left: 1.66667%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-left: 2.77778%;
 }
 #intro p:nth-child(-n+3) {
   font-size: 20px;
@@ -191,8 +191,8 @@ main section header h2 span {
   background: #c0ccb5;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #how:after {
   display: table;
@@ -202,18 +202,18 @@ main section header h2 span {
 #how header {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   padding-left: 0;
 }
 #how header h2 {
   width: 25%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #how article p {
-  margin-left: 5%;
+  margin-left: 8.33333%;
 }
 #how article h3 {
   font-family: "Source Sans Pro:400", sans-serif;
@@ -223,20 +223,20 @@ main section header h2 span {
 #how article:first-of-type {
   width: 33.33333%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #how article:nth-child(3) {
   width: 33.33333%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #how article:nth-child(4) {
   width: 33.33333%;
   float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #how figure {
   width: 300px;
@@ -250,8 +250,8 @@ main section header h2 span {
   color: #ebe1e1;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #context:after {
   display: table;
@@ -273,17 +273,17 @@ main section header h2 span {
 #context p {
   width: 33.33333%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-left: 2.5%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-left: 4.16667%;
   padding-left: 0;
 }
 #context img {
   width: 25%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-top: 1.66667%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-top: 2.77778%;
 }
 #context img:nth-child(4n + 1) {
   margin-left: 0;
@@ -309,8 +309,8 @@ main section header h2 span {
 #cabin, #common {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #cabin header, #common header {
   padding-left: 0;
@@ -318,41 +318,41 @@ main section header h2 span {
 #cabin article, #common article {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #cabin article p, #common article p {
   width: 25%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-left: 2.5%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-left: 4.16667%;
   padding-left: 0;
 }
 #cabin figure, #common figure {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #cabin figure img, #common figure img {
   width: 50%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   width: 50%;
   float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-top: 1.66667%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-top: 2.77778%;
 }
 
 #product {
   background: #c0ccb5;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #product figure {
   background: #464646;
@@ -360,14 +360,14 @@ main section header h2 span {
   text-align: center;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #product figure img {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   width: 100%;
   height: auto;
   display: block;
@@ -377,8 +377,8 @@ main section header h2 span {
 #product figure #caption {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   font-size: 20px;
   color: #ebe1e1;
   margin-top: 20px;
@@ -386,8 +386,8 @@ main section header h2 span {
 #product figure #prev, #product figure #next {
   width: 50%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   color: #ebe1e1;
   font-size: 30px;
   margin-top: 10px;
@@ -399,8 +399,8 @@ main section header h2 span {
   background: #464646;
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #contact header {
   padding-left: 0;
@@ -417,8 +417,8 @@ main section header h2 span {
 #contact form {
   width: 50%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   margin-left: 8.33333%;
 }
 #contact form textarea, #contact form input {
@@ -433,20 +433,20 @@ main section header h2 span {
 #contact form #name {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #contact form #mail {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
 #contact form #msg {
   width: 100%;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   height: 100px;
 }
 #contact form button {
@@ -463,8 +463,8 @@ main section header h2 span {
 #contact footer {
   width: 33.33333%;
   float: right;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
   margin-left: 8.33333%;
   color: #ebe1e1;
 }
@@ -492,26 +492,26 @@ main section header h2 span {
   #how {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how article:first-of-type {
     width: 33.33333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how article:nth-child(3) {
     width: 33.33333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how article:nth-child(4) {
     width: 33.33333%;
     float: right;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how figure {
     width: 200px;
@@ -520,12 +520,18 @@ main section header h2 span {
     margin-right: auto;
   }
 
+  #context p {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
   #context img {
     width: 33.33333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-top: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-top: 2.77778%;
   }
   #context img:nth-child(3n + 1) {
     margin-left: 0;
@@ -546,76 +552,57 @@ main section header h2 span {
   #cabin article, #common article {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #cabin article p:first-of-type, #common article p:first-of-type {
     width: 45.83333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-left: 2.77778%;
   }
   #cabin article p:nth-child(3), #common article p:nth-child(3) {
     width: 45.83333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-left: 2.77778%;
   }
   #cabin figure, #common figure {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #cabin figure img, #common figure img {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-top: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-top: 2.77778%;
   }
 }
 @media (min-width: 1px) and (max-width: 480px) {
-  main section header {
-    width: 41.66667%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin: 100px 0px 20px 0px;
-  }
   main section header h2 {
-    width: 100%;
+    width: 50%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin: 20px 0px 20px 0px;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   main section header h2:before {
-    content: "";
-    border-left: 1px solid black;
-    position: absolute;
-    height: 100px;
-  }
-  main section header h2 span {
-    width: 100%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: 6.66667%;
-    color: #1e0a0a;
+    height: 80px;
   }
 
   nav ul li {
     width: 33.33333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     margin-top: 0.25em;
     margin-right: 0;
   }
@@ -626,26 +613,23 @@ main section header h2 span {
   #intro header h2 {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     margin: 0px 0px 20px 0px;
   }
   #intro img {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #intro div {
-    width: 100%;
+    width: 95.83333%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-left: 2.77778%;
     margin-top: 30px;
-  }
-  #intro p {
-    margin-left: 5%;
   }
   #intro p:nth-child(-n+3) {
     font-size: 20px;
@@ -657,8 +641,8 @@ main section header h2 span {
   #how {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how header h2 {
     width: 40%;
@@ -669,20 +653,20 @@ main section header h2 span {
   #how article:first-of-type {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how article:nth-child(3) {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how article:nth-child(4) {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #how figure {
     width: 250px;
@@ -694,8 +678,8 @@ main section header h2 span {
   #context header {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     padding-left: 0;
   }
   #context header h2 {
@@ -707,16 +691,16 @@ main section header h2 span {
   #context p {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    padding-left: 0;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-left: 0;
   }
   #context img {
     width: 50%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-top: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-top: 2.77778%;
   }
   #context img:nth-child(2n + 1) {
     margin-left: 0;
@@ -732,14 +716,14 @@ main section header h2 span {
   #cabin, #common {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #cabin header, #common header {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     padding-left: 0;
   }
   #cabin header h2, #common header h2 {
@@ -748,36 +732,36 @@ main section header h2 span {
   #cabin article, #common article {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #cabin article p, #common article p {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-left: 2.5%;
-    padding-left: 0;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-left: 0;
+    margin-bottom: 2.77778%;
   }
   #cabin figure, #common figure {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #cabin figure img, #common figure img {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    margin-top: 1.66667%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-top: 2.77778%;
   }
 
   #contact header {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     padding-left: 0;
   }
   #contact header h2 {
@@ -786,15 +770,15 @@ main section header h2 span {
   #contact form {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     margin-left: 0;
   }
   #contact form textarea, #contact form input {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     height: 30px;
     font-family: "Source Sans Pro:400", sans-serif;
     color: #ebe1e1;
@@ -806,26 +790,26 @@ main section header h2 span {
   #contact form #name {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #contact form #mail {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #contact form #msg {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
   #contact footer {
     width: 100%;
     float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
     margin-left: 0;
     text-align: center;
   }
